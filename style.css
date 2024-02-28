@@ -1,0 +1,33 @@
+.custom-bg-yellow {
+  background-color: rgb(252, 210, 50);
+}
+.custom-navbar-toggler {
+  font-size: 60px;
+  border: none;
+  background-color: transparent;
+}
+nav .custom-button {
+  background-color: rgb(233, 16, 9);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 1px solid rgb(233, 16, 9);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav .custom-button:hover {
+  background-color: black;
+  color: rgb(252, 210, 50);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+.offcanvas-title {
+  color: transparent !important;
+}
+
+@media (max-width: 990px) {
+  .offcanvas-body a {
+    color: white !important;
+  }
+}
