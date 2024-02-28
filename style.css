@@ -25,6 +25,15 @@ nav .custom-button:hover {
 .offcanvas-title {
   color: transparent !important;
 }
+.bg-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url("./images/img-1.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 70vh;
+}
 
 @media (max-width: 990px) {
   .offcanvas-body a {
