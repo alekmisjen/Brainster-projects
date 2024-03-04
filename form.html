@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brainster Labs</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Option 1: Include in HTML -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar custom-bg-yellow navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-3" href="./index.html">
+          <img
+            src="./images/Logo.png"
+            width="50px"
+            height="50px"
+            class="mx-auto d-block align-text-top text-black"
+          /><span class="fs-6 fw-semibold text-uppercase">brainster</span></a
+        >
+        <button
+          class="custom-navbar-toggler d-lg-none m-0 p-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-filter-right"></i>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasResponsiveLabel"></h5>
+
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-center flex-grow-1 fw-semibold"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="https://brainster.co/marketing/"
+                  target="_blank"
+                  >Академија за маркетинг</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://brainster.co/full-stack/"
+                  target="_blank"
+                  >Академија за програмирање</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://brainster.co/graphic-design/"
+                  target="_blank"
+                  >Академија за дизајн</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://brainster.co/data-science/"
+                  target="_blank"
+                  >Академија за data-science</a
+                >
+              </li>
+            </ul>
+            <a href="#" class="custom-button me-lg-5">Вработи наш студент</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- form -->
+    <div class="container-fluid custom-bg-yellow">
+      <div class="col-md-7 col-lg-8 mx-auto title">
+        <h1 class="my-5 text-center">Вработи студент</h1>
+        <form class="needs-validation" novalidate>
+          <div class="row g-4 title">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label fw-semibold"
+                >Име и презиме</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder="Вашето име и презиме"
+                value=""
+                required
+              />
+              <div class="invalid-feedback">
+                Ве молиме внесето го вашето име и презиме
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="companyName" class="form-label fw-semibold"
+                >Име на компанија</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="companyName"
+                placeholder="Име на вашата компанија"
+                value=""
+                required
+              />
+              <div class="invalid-feedback">
+                Ве молиме внесете го имеto на вашата компанија
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label for="email" class="form-label fw-semibold"
+                >Контакт имејл</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Контакт имејл на вашата компанија"
+                required
+              />
+              <div class="invalid-feedback">
+                Ве молиме внесете валидна имејл адреса
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label for="phone" class="form-label fw-semibold"
+                >Контакт телефон</label
+              >
+              <div class="input-group has-validation">
+                <span class="input-group-text">+389</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Контакт телефон на вашата компанија"
+                  value=""
+                  required
+                  pattern="[0-9]{8}"
+                />
+                <div class="invalid-feedback">
+                  Ве молиме внесете валиден телефонски број 12345678
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label for="student" class="form-label fw-semibold"
+                >Тип на студент</label
+              >
+              <select class="form-select" id="student" required>
+                <option value="">Избери студент</option>
+                <option value="marketing">Студент од маркетинг</option>
+                <option value="programing">Студент од програмирање</option>
+                <option value="data-science">Студент од data-science</option>
+                <option value="design">Студент од дизајн</option>
+              </select>
+              <div class="invalid-feedback">
+                Ве молиме изберет тип на студент
+              </div>
+            </div>
+            <div class="col-sm-6 my-4">
+              <button class="w-100 custom-button" type="submit">Испрати</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- BUNDLE JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              //Phone Validation
+              let phoneInput = document.getElementById("phone");
+              let phoneRegex = /^[0-9]{8}$/;
+              if (!phoneRegex.test(phoneInput.value)) {
+                phoneInput.setCustomValidity(
+                  "Please enter a valid 10-digit phone number."
+                );
+              } else {
+                phoneInput.setCustomValidity("");
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>
