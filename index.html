@@ -495,6 +495,9 @@
           </div>
         </div>
       </div>
+      <div class="btn-container text-center">
+        <button class="buttonShow btn btn-dark mb-3">Прикажи повеќе</button>
+      </div>
     </div>
 
     <!-- BUNDLE JS -->
@@ -503,6 +506,23 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const customCard = document.querySelectorAll(".custom-card");
+      const btn = document.querySelector(".buttonShow");
+      var currentImg = 6;
+      btn.addEventListener("click", function () {
+        for (var i = currentImg; i < currentImg + 6; i++) {
+          if (customCard[i]) {
+            customCard[i].style.display = "block";
+          }
+        }
+        currentImg += 6;
+        if (currentImg >= customCard.length) {
+          event.target.style.display = "none";
+        }
+      });
+    </script>
     <script src="./js/filters.js"></script>
   </body>
 </html>

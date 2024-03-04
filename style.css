@@ -104,7 +104,10 @@ nav .custom-button:hover {
   color: black;
   background-color: #ffc107;
 }
-
+.btn-dark:hover {
+  color: #ffc107 !important;
+  background-color: black !important;
+}
 input[type="checkbox"] {
   display: none;
 }
@@ -151,6 +154,9 @@ form .custom-button {
 .was-validated .form-select:invalid:not([multiple]):not([size]) {
   background-image: none !important;
 }
+.btn-container {
+  display: none;
+}
 @media (max-width: 990px) {
   .offcanvas-body a {
     color: white !important;
@@ -164,5 +170,12 @@ form .custom-button {
 @media (max-width: 568px) {
   .custom-card {
     flex-basis: 100%;
+    display: none;
+  }
+  .custom-card:nth-child(-n + 6) {
+    display: block;
+  }
+  .btn-container {
+    display: block;
   }
 }
