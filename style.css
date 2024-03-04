@@ -138,7 +138,7 @@ select option:hover {
   color: white;
 }
 form .custom-button {
-  background-color: rgb(233, 16, 9);
+  background-color: #e91009;
   color: white;
   padding: 8px 15px;
   border-radius: 4px;
@@ -157,9 +157,13 @@ form .custom-button {
 .btn-container {
   display: none;
 }
+
 @media (max-width: 990px) {
   .offcanvas-body a {
     color: white !important;
+  }
+  .hover-underline-animation:hover:after {
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -178,4 +182,26 @@ form .custom-button {
   .btn-container {
     display: block;
   }
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #302f38;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #302f38;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
 }
