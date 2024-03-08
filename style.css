@@ -91,7 +91,7 @@ svg {
   stroke-dasharray: 2000;
   animation-name: brainster;
   animation-duration: 15s;
-  animation-iteration-count: 1;
+  animation-iteration-count: 2;
   animation-direction: alternate;
   animation-fill-mode: both;
 }
