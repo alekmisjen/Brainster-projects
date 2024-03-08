@@ -34,14 +34,85 @@ nav .custom-button:hover {
 .offcanvas-title {
   color: transparent !important;
 }
-.bg-img {
+.hero-banner {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url("./images/img-1.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 70vh;
+  height: 80vh;
+  position: relative;
+}
+.banner-content {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.banner-title h3 {
+  font-family: Avenir, Futura, "Open Sans", "Gill Sans", "Helvetica Neue", Ariel,
+    sans-serif;
+  font-weight: bold;
+  font-size: 4vw;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    #ebe4e4,
+    #ffc300,
+    #ebe4e4 0%,
+    #ffc300 25%,
+    #ccc4c4 50%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 300ms ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+}
+.banner-title h3:hover {
+  background-position: 0 100%;
+}
+svg {
+  width: 30%;
+  height: 30%;
+}
+
+.brainster {
+  stroke: #ffc300;
+  stroke-width: 1px;
+  stroke-dashoffset: -2000;
+  stroke-dasharray: 2000;
+  animation-name: brainster;
+  animation-duration: 15s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+}
+@keyframes brainster {
+  0% {
+    stroke-dashoffset: -2000;
+    stroke: #ff5733;
+  }
+  30% {
+    stroke: #ffc300;
+  }
+  50% {
+    stroke: #ff5733;
+  }
+  70% {
+    stroke: #ffc300;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke: white;
+  }
 }
 
 .cards img {
