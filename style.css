@@ -98,15 +98,18 @@ svg {
 @keyframes brainster {
   0% {
     stroke-dashoffset: -2000;
-    stroke: #ff5733;
-  }
-  30% {
     stroke: #ffc300;
   }
-  50% {
+  20% {
     stroke: #ff5733;
   }
-  70% {
+  40% {
+    stroke: #ffc300;
+  }
+  60% {
+    stroke: #ff5733;
+  }
+  80% {
     stroke: #ffc300;
   }
   100% {
