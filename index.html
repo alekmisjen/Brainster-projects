@@ -166,94 +166,20 @@
         <div class="title">
           <h1 class="">Се што треба да знаеш</h1>
         </div>
+        <!-- TODO link instead buttons with btn class -->
         <div class="filters d-flex justify-content-between mx-auto">
           <button class="btn active">Видеа</button>
           <button class="btn">Упатства</button>
           <button class="btn">Статии</button>
         </div>
-        <div class="pills py-3 mx-auto d-flex flex-wrap justify-content-around">
-          <button class="custom-btn">Најгледани</button>
-          <button class="custom-btn">Актуелни</button>
-
-          <button class="custom-btn active">Најнови</button>
-
-          <button class="custom-btn">Азбучен редослед</button>
-
-          <button class="custom-btn">Интернет Видеа</button>
-
-          <button class="custom-btn">Приватност</button>
-
-          <button class="custom-btn active">Опасност</button>
-
-          <button class="custom-btn">Lorem ipsum</button>
-
-          <button class="custom-btn">Lorem ipsum</button>
-
-          <button class="custom-btn">Lorem ipsum</button>
-          <button class="custom-btn active">Lorem ipsum</button>
-
-          <button class="custom-btn">Lorem ipsum</button>
-
-          <button class="custom-btn">Lorem ipsum</button>
-
-          <button class="custom-btn">Lorem ipsum</button>
-        </div>
-        <div class="container d-grid gap-2 py-5">
-          <div class="flex-grid">
-            <div class="content-card">
-              <div class="card-image">
-                <img src="./images/img1.png" alt="" />
-              </div>
-              <div class="card-overlay">
-                <h3 class="p-3">Наслов на видео</h3>
-                <p class="px-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem
-                  ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Mollitia laboriosam eveniet corporis a soluta tempore!
-                </p>
-              </div>
-            </div>
-            <div class="content-card">
-              <div class="card-image">
-                <img src="./images/img2.png" alt="" />
-              </div>
-              <div class="card-overlay">
-                <h3 class="p-3">Наслов на видео</h3>
-                <p class="px-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem
-                  ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Mollitia laboriosam eveniet corporis a soluta tempore!
-                </p>
-              </div>
-            </div>
-            <div class="content-card">
-              <div class="card-image">
-                <img src="./images/img3.png" alt="" />
-              </div>
-              <div class="card-overlay">
-                <h3 class="p-3">Наслов на видео</h3>
-                <p class="px-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem
-                  ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Mollitia laboriosam eveniet corporis a soluta tempore!
-                </p>
-              </div>
-            </div>
-            <div class="content-card">
-              <div class="card-image">
-                <img src="./images/img4.png" alt="" />
-              </div>
-              <div class="card-overlay">
-                <h3 class="p-3">Наслов на видео</h3>
-                <p class="px-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem
-                  ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Mollitia laboriosam eveniet corporis a soluta tempore!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div
+          class="pills py-3 mx-auto d-flex flex-wrap justify-content-around"
+          id="pills"
+        ></div>
+        <div
+          class="container p-5 d-flex justify-content-center align-center mb-2"
+          id="cards-container"
+        ></div>
       </div>
     </section>
     <section id="discussion">
@@ -359,6 +285,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="./script.js"></script>
+    <script src="js/cardsList.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

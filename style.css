@@ -15,10 +15,10 @@ body {
 .sticky-top {
   top: 50px;
 }
-.card-image img {
+/* .card-image img {
   width: 100%;
   display: block;
-}
+} */
 /* {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -107,6 +107,12 @@ p {
   display: flex;
   margin-right: -20px;
   flex-wrap: wrap;
+}
+#cards-container {
+  display: flex;
+  margin-right: -20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 .custom-card {
   flex-basis: 33.333%;
