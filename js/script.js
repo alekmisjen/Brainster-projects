@@ -4,7 +4,19 @@ const contentPage = document.querySelector("#content");
 const discussionPage = document.querySelector("#discussion");
 const contactPage = document.querySelector("#contact");
 const profilePage = document.querySelector("#profile");
+const loginPage = document.querySelector("#login");
+
 const cardList = document.querySelector("#cards-container");
+
+const loginForm = document.querySelector("#login-form");
+
+const loginLink = document.querySelector(".login-link");
+const profileLink = document.querySelector(".profile-link");
+
+const logoutBtn = document.querySelector("#logout-btn");
+
+const USERNAME_STORAGE_KEY = "currentUsername";
+
 let activeCategories = new Set();
 
 function createButtonPills(categories) {
@@ -117,6 +129,53 @@ cards.forEach((card) => {
   cardList.append(showCard);
 });
 
+function isUserAuthenticated() {
+  return Boolean(localStorage.getItem(USERNAME_STORAGE_KEY));
+}
+function onLogout() {
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem(USERNAME_STORAGE_KEY);
+    onLogin();
+    location.has = "";
+  });
+}
+function onLogin() {
+  const isAuthenticated = isUserAuthenticated();
+  if (isAuthenticated) {
+    loginLink.style.display = "none";
+    profileLink.style.display = "block";
+    logoutBtn.style.display = "block";
+    onLogout();
+  } else {
+    loginLink.style.display = "block";
+    profileLink.style.display = "none";
+    logoutBtn.style.display = "none";
+  }
+}
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const username = document.querySelector("#username").value;
+  //console.log(username);
+  const password = document.querySelector("#password").value;
+  //console.log(password);
+  fetch("http://localhost:5000/api/authentication", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ username, password }),
+  })
+    .then((_) => {
+      localStorage.setItem(USERNAME_STORAGE_KEY, username);
+      onLogin();
+      location.hash = "home";
+      //console.log("success");
+    })
+    .catch((error) => {
+      console.log(`failure - ${error}`);
+      alert("invalid credentials.");
+    });
+});
 function handleRoute() {
   const currentHashRoute = location.hash.slice(1);
   switch (currentHashRoute) {
@@ -126,6 +185,8 @@ function handleRoute() {
       discussionPage.style.display = "none";
       contactPage.style.display = "none";
       profilePage.style.display = "none";
+      loginPage.style.display = "none";
+      //profileLink.style.display = "none";
 
       break;
     }
@@ -135,6 +196,10 @@ function handleRoute() {
       discussionPage.style.display = "none";
       contactPage.style.display = "none";
       profilePage.style.display = "none";
+      loginPage.style.display = "none";
+      //loginLink.style.display = "none";
+      //profileLink.style.display = "block";
+
       break;
     }
     case "content": {
@@ -143,6 +208,7 @@ function handleRoute() {
       discussionPage.style.display = "none";
       contactPage.style.display = "none";
       profilePage.style.display = "none";
+      loginPage.style.display = "none";
 
       break;
     }
@@ -153,6 +219,8 @@ function handleRoute() {
       discussionPage.style.display = "block";
       contactPage.style.display = "none";
       profilePage.style.display = "none";
+      loginPage.style.display = "none";
+
       break;
     }
     case "contact": {
@@ -161,6 +229,8 @@ function handleRoute() {
       discussionPage.style.display = "none";
       contactPage.style.display = "block";
       profilePage.style.display = "none";
+      loginPage.style.display = "none";
+
       break;
     }
     case "profile": {
@@ -169,14 +239,28 @@ function handleRoute() {
       discussionPage.style.display = "none";
       contactPage.style.display = "none";
       profilePage.style.display = "block";
+      loginPage.style.display = "none";
+
+      break;
+    }
+    case "login": {
+      homePage.style.display = "none";
+      contentPage.style.display = "none";
+      discussionPage.style.display = "none";
+      contactPage.style.display = "none";
+      profilePage.style.display = "none";
+      loginPage.style.display = "block";
       break;
     }
     default:
       location.hash = "";
   }
 }
+// Handling login form
+
 window.addEventListener("load", () => {
   handleRoute();
+  onLogin();
 });
 
 window.addEventListener("hashchange", () => {

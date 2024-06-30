@@ -15,6 +15,9 @@ body {
 .sticky-top {
   top: 50px;
 }
+a {
+  cursor: pointer;
+}
 /* .card-image img {
   width: 100%;
   display: block;
@@ -214,7 +217,39 @@ button.active {
   -webkit-backdrop-filter: blur(5px);
   border-top: 2px solid #ffffff66;
 }
-
+.btn-login {
+  border: 1px solid #4826b9;
+  border-radius: 3px;
+  padding: 5px 2px;
+  color: #152347;
+  background-color: white;
+}
+h5 {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+}
+h5:before,
+h5:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: auto;
+  color: #4826b9;
+}
+h5:before {
+  margin-right: 10px;
+}
+h5:after {
+  margin-left: 10px;
+}
+h5 span {
+  color: white;
+}
+form i {
+  margin-left: -30px;
+  cursor: pointer;
+}
 footer a.nav-link {
   color: white !important;
 }

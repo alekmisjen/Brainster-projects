@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -44,21 +47,22 @@
               <a class="nav-link" href="#contact">Контакт</a>
             </li>
             <li class="nav-item ms-2">
-              <a class="nav-link" href="#profile">Профил</a>
+              <a class="nav-link profile-link" href="#profile">Профил</a>
             </li>
           </ul>
-          <button type="button" class="btn-custom-header me-3" id="login">
+          <a href="#login" class="btn-custom-header me-3 login-link">
             <img
               src="images/user_icon.png"
               width="18px"
               height="18px"
               class="me-2"
             />Најави се
-          </button>
-          <button type="button" class="btn me-2">MK | AL</button>
-          <button type="button" class="btn me-2">
+          </a>
+          <button id="logout-btn">Log out</button>
+          <a class="btn me-2">MK | AL</a>
+          <a class="btn me-2">
             <img src="images/search_icon.png" width="32px" height="32px" />
-          </button>
+          </a>
         </div>
       </div>
     </nav>
@@ -185,14 +189,100 @@
     <section id="discussion">
       <p>Discussion page</p>
     </section>
-
     <section id="contact">
       <p>Contact page</p>
     </section>
     <section id="profile">
       <p>profile page</p>
     </section>
-    <section id="login"></section>
+    <section id="login">
+      <div class="container">
+        <div class="title mb-3">
+          <h1 class="">Придружи ни се</h1>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div
+              class="btn-login w-75 d-flex justify-content-start mx-auto mb-3"
+            >
+              <img
+                src="images/google_icon.png"
+                width="25px"
+                height="25px"
+                class="ms-3"
+              /><span class="ms-3">Продолжи со Google</span>
+            </div>
+            <div
+              class="btn-login w-75 d-flex justify-content-start mx-auto mb-3"
+            >
+              <img
+                src="images/apple_icon.png"
+                width="25px"
+                height="25px"
+                class="ms-3"
+              /><span class="ms-3">Продолжи со Apple</span>
+            </div>
+            <div
+              class="btn-login w-75 d-flex justify-content-start mx-auto mb-3"
+            >
+              <img
+                src="images/tiktok_icon.png"
+                width="25px"
+                height="25px"
+                class="ms-3"
+              /><span class="ms-3">Продолжи со TikTok</span>
+            </div>
+            <h5 class="mx-auto py-3"><span>или</span></h5>
+            <form id="login-form">
+              <div class="form-group w-75 mx-auto mb-3 text-white">
+                <label for="username">Корисничко име*</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  aria-describedby="emailHelp"
+                  placeholder="username"
+                  required
+                />
+              </div>
+              <div class="form-group w-75 mx-auto mb-3 text-white">
+                <label for="password">Лозинка*</label>
+
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <div
+                class="form-check mx-auto d-flex justify-content-between w-75 text-white"
+              >
+                <div>
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Запомни ме</label
+                  >
+                </div>
+                <a href="#" class="text-white">Ја заборави лозинката?</a>
+              </div>
+              <button type="submit">Najavi se</button>
+            </form>
+          </div>
+
+          <div class="col">
+            <div class="login-image w-75">
+              <img src="./images/login.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="container-fluid custom-footer mt-5">
       <footer class="p-5 mx-auto">
@@ -281,8 +371,18 @@
     </div>
 
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
     <script src="js/cardsList.js"></script>
