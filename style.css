@@ -197,7 +197,7 @@ button.active {
   border-radius: 8px;
   margin-right: 20px;
   overflow: hidden;
-
+  cursor: pointer;
   box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.28);
   position: relative;
   display: inline-block;

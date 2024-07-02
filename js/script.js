@@ -8,6 +8,8 @@ const loginPage = document.querySelector("#login");
 
 const cardList = document.querySelector("#cards-container");
 
+const videoDetails = document.querySelector("#video-details");
+
 const loginForm = document.querySelector("#login-form");
 
 const loginLink = document.querySelector(".login-link");
@@ -16,9 +18,29 @@ const profileLink = document.querySelector(".profile-link");
 const logoutBtn = document.querySelector("#logout-btn");
 
 const USERNAME_STORAGE_KEY = "currentUsername";
+const FILTER_STORAGE_KEY = "activeFilters";
 
 let activeCategories = new Set();
-
+//save active categories to session storage
+function saveActiveCategories() {
+  if (isUserAuthenticated()) {
+    sessionStorage.setItem(
+      FILTER_STORAGE_KEY,
+      JSON.stringify([...activeCategories])
+    );
+  }
+}
+//load active categories frmo storage
+function loadActiveCategories() {
+  if (isUserAuthenticated()) {
+    const savedCategories = JSON.parse(
+      sessionStorage.getItem(FILTER_STORAGE_KEY)
+    );
+    if (savedCategories && savedCategories > 0) {
+      activeCategories = new Set(savedCategories);
+    }
+  }
+}
 function createButtonPills(categories) {
   // Get the container where buttons will be appended
   const pillsDiv = document.querySelector("#pills");
@@ -44,9 +66,10 @@ function toggleCategory(category, button) {
     activeCategories.add(category);
     button.classList.add("active");
   }
+  saveActiveCategories();
   displayCardsByCategory();
 }
-function displayCardsByCategory(category) {
+function displayCardsByCategory() {
   // const cardList = document.querySelector("#cards-container");
 
   cardList.innerText = "";
@@ -79,6 +102,7 @@ function getUniqueCategories(cards) {
 
 /// Ensure the cards object is loaded before calling the function
 if (typeof cards !== "undefined") {
+  loadActiveCategories();
   const uniqueCategories = getUniqueCategories(cards);
   console.log("Unique categories found:", uniqueCategories); // Add a console log to confirm unique categories
   createButtonPills(uniqueCategories);
@@ -87,56 +111,15 @@ if (typeof cards !== "undefined") {
   console.error("Cards data not loaded properly.");
 }
 
-function renderCard(card) {
-  const container = document.createElement("div");
-  container.classList.add("content-card", "mb-3");
-  const cardImage = document.createElement("div");
-  cardImage.classList.add("card-image");
-  const img = document.createElement("img");
-  img.src = card.image;
-  const overlay = document.createElement("div");
-  overlay.classList.add("card-overlay");
-  const title = document.createElement("h3");
-  title.innerText = card.title;
-  title.classList.add("p-3");
-  const desc = document.createElement("p");
-  desc.innerText = card.description;
-  desc.classList.add("px-3");
-
-  overlay.append(title, desc);
-  cardImage.appendChild(img);
-  container.append(cardImage, overlay);
-
-  return container;
-
-  // cardList.innerHTML += `
-
-  // <div class="content-card mb-3">
-  //             <div class="card-image">
-  //               <img src="${card.image}" alt="${card.title}" />
-  //             </div>
-  //             <div class="card-overlay">
-  //               <h3 class="p-3">${card.title}</h3>
-  //               <p class="px-3">${card.description}
-  //               </p>
-  //             </div>
-  //           </div>
-
-  //           `;
-}
-cards.forEach((card) => {
-  const showCard = renderCard(card);
-  cardList.append(showCard);
-});
-
 function isUserAuthenticated() {
   return Boolean(localStorage.getItem(USERNAME_STORAGE_KEY));
 }
 function onLogout() {
   logoutBtn.addEventListener("click", () => {
     localStorage.removeItem(USERNAME_STORAGE_KEY);
+    sessionStorage.removeItem(FILTER_STORAGE_KEY);
     onLogin();
-    location.has = "";
+    location.hash = "login";
   });
 }
 function onLogin() {
@@ -165,10 +148,16 @@ loginForm.addEventListener("submit", (event) => {
     },
     body: JSON.stringify({ username, password }),
   })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Invalid credentials");
+      }
+      return response.json();
+    })
     .then((_) => {
       localStorage.setItem(USERNAME_STORAGE_KEY, username);
       onLogin();
-      location.hash = "home";
+      location.hash = "content";
       //console.log("success");
     })
     .catch((error) => {
@@ -177,7 +166,10 @@ loginForm.addEventListener("submit", (event) => {
     });
 });
 function handleRoute() {
-  const currentHashRoute = location.hash.slice(1);
+  let currentHashRoute = location.hash.slice(1);
+  // if (currentHashRoute.includes("videodetails")) {
+  //   currentHashRoute = "videodetails";
+  // }
   switch (currentHashRoute) {
     case "": {
       homePage.style.display = "block";
@@ -186,7 +178,6 @@ function handleRoute() {
       contactPage.style.display = "none";
       profilePage.style.display = "none";
       loginPage.style.display = "none";
-      //profileLink.style.display = "none";
 
       break;
     }
@@ -197,8 +188,6 @@ function handleRoute() {
       contactPage.style.display = "none";
       profilePage.style.display = "none";
       loginPage.style.display = "none";
-      //loginLink.style.display = "none";
-      //profileLink.style.display = "block";
 
       break;
     }
@@ -212,6 +201,22 @@ function handleRoute() {
 
       break;
     }
+    // case "videoDetails": {
+    //   homePage.style.display = "none";
+    //   contentPage.style.display = "block";
+    //   discussionPage.style.display = "none";
+    //   contactPage.style.display = "none";
+    //   profilePage.style.display = "none";
+    //   loginPage.style.display = "none";
+    //   videoDetails.style.display = "block";
+    //   // const id = location.hash.split("/")[1];
+    //   // const foundVideo = cards.find((card) => card.id === +id);
+    //   // console.log(foundVideo);
+
+    //   // const video = renderCard(foundVideo);
+    //   // videoDetails.append(video);
+    //   break;
+    //}
 
     case "discussion": {
       homePage.style.display = "none";
@@ -256,6 +261,35 @@ function handleRoute() {
       location.hash = "";
   }
 }
+function renderCard(card) {
+  const container = document.createElement("div");
+  container.classList.add("content-card", "mb-3");
+  container.addEventListener("click", () => {
+    location.hash = `videodetails/${card.id}`;
+  });
+  const cardImage = document.createElement("div");
+  cardImage.classList.add("card-image");
+  const img = document.createElement("img");
+  img.src = card.image;
+  const overlay = document.createElement("div");
+  overlay.classList.add("card-overlay");
+  const title = document.createElement("h3");
+  title.innerText = card.title;
+  title.classList.add("p-3");
+  const desc = document.createElement("p");
+  desc.innerText = card.description;
+  desc.classList.add("px-3");
+
+  overlay.append(title, desc);
+  cardImage.appendChild(img);
+  container.append(cardImage, overlay);
+
+  return container;
+}
+cards.forEach((card) => {
+  const showCard = renderCard(card);
+  cardList.append(showCard);
+});
 // Handling login form
 
 window.addEventListener("load", () => {

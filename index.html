@@ -183,11 +183,37 @@
         <div
           class="container p-5 d-flex justify-content-center align-center mb-2"
           id="cards-container"
+          data-toggle="modal"
+          data-target="#myModal"
         ></div>
       </div>
     </section>
     <section id="discussion">
-      <p>Discussion page</p>
+      <div class="container">
+        <div class="row mx-auto">
+          <div class="col">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates iste aliquid nisi quidem voluptatibus commodi illo
+              explicabo accusamus consectetur voluptate!
+            </p>
+            <div class="mb-3">
+              <p class="d-flex align-center justify-content-between">
+                <img src="images/user1.png" />
+                <span class="ms-3">John Doe</span>
+
+                <span class="">12/04/24 12:47</span>
+              </p>
+            </div>
+            <input type="text" placeholder="write comment" class="mb-3" />
+            <div class="d-flex justify-content-between mb-3">
+              <span>+</span><span>Komentari</span><span>Reakcii</span>
+            </div>
+          </div>
+          <div class="col">One of three columns</div>
+          <div class="col">One of three columns</div>
+        </div>
+      </div>
     </section>
     <section id="contact">
       <p>Contact page</p>
@@ -283,7 +309,35 @@
         </div>
       </div>
     </section>
-
+    <!-- <section id="video-details">
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="img">Enter img url</label>
+                <input type="text" id="img" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="title">Enter title</label>
+                <input type="text" id="title" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="desc">Enter description</label>
+                <input type="text" id="desc" class="form-control" />
+              </div>
+              <button
+                class="btn btn-success"
+                id="add-product"
+                data-dismiss="modal"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
     <div class="container-fluid custom-footer mt-5">
       <footer class="p-5 mx-auto">
         <div class="row align-center justify-content-around">
@@ -386,6 +440,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/cardsList.js"></script>
+    <script src="js/discussions.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
