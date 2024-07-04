@@ -133,7 +133,8 @@ p {
   width: 100px;
   height: 100px;
 }
-.card-content {
+.card-content,
+.discussion-content {
   border-radius: 16px;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -252,6 +253,15 @@ form i {
 }
 footer a.nav-link {
   color: white !important;
+}
+.discussion-card {
+  border: 1px solid white;
+  border-radius: 16px;
+}
+.custom-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #42356b;
 }
 .custom-footer {
   width: 100%;

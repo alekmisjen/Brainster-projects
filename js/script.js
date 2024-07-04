@@ -19,7 +19,55 @@ const logoutBtn = document.querySelector("#logout-btn");
 
 const USERNAME_STORAGE_KEY = "currentUsername";
 const FILTER_STORAGE_KEY = "activeFilters";
+// Random backround color when discussion cart is created
+const discussionsBoard = document.querySelectorAll(".custom-card");
+const backgroundColor = ["#4B7CF3", "#83EAB1", "#764FF0", "#8F39EC"];
 
+function getRandomColor() {
+  return backgroundColor[Math.floor(Math.random() * backgroundColor.length)];
+}
+
+//
+
+const discList = document.querySelector("#discussion-cards-container");
+discussions.forEach((discCard) => {
+  if (!discCard.color) {
+    discCard.color = getRandomColor();
+  }
+  renderCardsToDiscussionBoard(discCard);
+  console.log(discussions);
+});
+
+function renderCardsToDiscussionBoard(discCard) {
+  discList.innerHTML += `
+   
+            <div class=" w-25 m-2 discussion-content " style="background-color: ${discCard.color}">
+              <div class="p-3">
+                <p>
+                  ${discCard.text}
+                </p>
+                <div class="mb-3">
+                  <p class="d-flex align-items-center">
+                    <img src= ${discCard.image} />
+                  <span class="ms-3"> ${discCard.username}</span>
+                    <span class="ms-5">12/04/24 12:47</span>
+                  </p>
+                </div>
+                
+                <input
+                  type="text"
+                  placeholder="write comment"
+                  class="mb-3 custom-input w-100 px-2"
+                />
+                <div class="d-flex justify-content-start mb-3">
+                  <span class="me-3">+</span><span class="ms-3"> ${discCard.comments} Коментари</span
+                  ><span class="ms-3"> ${discCard.reactions} Реакции</span>
+                </div>
+              </div>
+              </div>
+            
+           `;
+}
 let activeCategories = new Set();
 //save active categories to session storage
 function saveActiveCategories() {
@@ -264,9 +312,9 @@ function handleRoute() {
 function renderCard(card) {
   const container = document.createElement("div");
   container.classList.add("content-card", "mb-3");
-  container.addEventListener("click", () => {
-    location.hash = `videodetails/${card.id}`;
-  });
+  // container.addEventListener("click", () => {
+  //   location.hash = `videodetails/${card.id}`;
+  // });
   const cardImage = document.createElement("div");
   cardImage.classList.add("card-image");
   const img = document.createElement("img");
