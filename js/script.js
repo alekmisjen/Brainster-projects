@@ -20,54 +20,125 @@ const logoutBtn = document.querySelector("#logout-btn");
 const USERNAME_STORAGE_KEY = "currentUsername";
 const FILTER_STORAGE_KEY = "activeFilters";
 // Random backround color when discussion cart is created
-const discussionsBoard = document.querySelectorAll(".custom-card");
+//const experiencesBoard = document.querySelectorAll(".experience-card");
 const backgroundColor = ["#4B7CF3", "#83EAB1", "#764FF0", "#8F39EC"];
 
-function getRandomColor() {
-  return backgroundColor[Math.floor(Math.random() * backgroundColor.length)];
-}
+// class Experience {
+//   constructor(username, content, image) {
+//     this.username = username;
+//     this.content = content;
+//     this.image = image;
+//     this.datetime = new Date();
+//   }
+// }
+// function getExperiencesFromSessionStorage() {
+//   const experiencesFromSS = JSON.parse(sessionStorage.getItem("experiences"));
+//   if (!experiencesFromSS) return [];
+//   experiencesFromSS.forEach((experience) => {
+//     experience.datetime = new Date(experience.datetime);
+//   });
+//   return experiencesFromSS;
+// }
+// const experiences = getExperiencesFromSessionStorage();
+// const experienceForm = document.querySelector("#experienceForm");
+// experiences.sort((a, b) => new Date(a.datetime) - new Date(b.datetime));
+// function getRandomColor() {
+//   return backgroundColor[Math.floor(Math.random() * backgroundColor.length)];
+// }
 
-//
+// const experienceList = document.querySelector("#experienceList");
+// function renderExperiences() {
+//   experiences.forEach((experience) => {
+//     const experienceContainer = document.createElement("div");
+//     experienceContainer.classList.add("w-25", "m-2", "discussion-content");
+//     experienceContainer.style.backgroundColor = getRandomColor();
+//     // Create inner content container
+//     const experinceContentContainer = document.createElement("div");
+//     experinceContentContainer.classList.add("p-3");
 
-const discList = document.querySelector("#discussion-cards-container");
-discussions.forEach((discCard) => {
-  if (!discCard.color) {
-    discCard.color = getRandomColor();
-  }
-  renderCardsToDiscussionBoard(discCard);
-  console.log(discussions);
-});
+//     //Create and append the content paragraph
+//     const contentParagraph = document.createElement("p");
+//     contentParagraph.textContent = `${experience.content}`;
+//     experinceContentContainer.appendChild(contentParagraph);
 
-function renderCardsToDiscussionBoard(discCard) {
-  discList.innerHTML += `
-   
-            <div class=" w-25 m-2 discussion-content " style="background-color: ${discCard.color}">
-              <div class="p-3">
-                <p>
-                  ${discCard.text}
-                </p>
-                <div class="mb-3">
-                  <p class="d-flex align-items-center">
-                    <img src= ${discCard.image} />
-                  <span class="ms-3"> ${discCard.username}</span>
-                    <span class="ms-5">12/04/24 12:47</span>
-                  </p>
-                </div>
-                
-                <input
-                  type="text"
-                  placeholder="write comment"
-                  class="mb-3 custom-input w-100 px-2"
-                />
-                <div class="d-flex justify-content-start mb-3">
-                  <span class="me-3">+</span><span class="ms-3"> ${discCard.comments} Коментари</span
-                  ><span class="ms-3"> ${discCard.reactions} Реакции</span>
-                </div>
-              </div>
-              </div>
-            
-           `;
-}
+//     //   // Create and append the user info container
+//     const userInfoContainer = document.createElement("div");
+//     userInfoContainer.classList.add("mb-3");
+//     const userInfoParagraph = document.createElement("p");
+//     userInfoParagraph.classList.add("d-flex", "align-items-center");
+
+//     const userImage = document.createElement("img");
+//     userImage.src = `images/user1.png`;
+
+//     const usernameSpan = document.createElement("span");
+//     usernameSpan.classList.add("ms-3");
+//     usernameSpan.textContent = `${experience.username}`;
+//     const dateSpan = document.createElement("span");
+//     dateSpan.classList.add("ms-5");
+//     dateSpan.textContent = `${experience.datetime
+//       .toLocaleString()
+//       .replace("AM", "")
+//       .replace("PM", "")}`;
+
+//     userInfoParagraph.append(userImage, usernameSpan, dateSpan);
+//     userInfoContainer.append(userInfoParagraph);
+//     experinceContentContainer.append(userInfoContainer);
+
+//     //   // Create and append the comment input
+//     const commentInput = document.createElement("input");
+//     commentInput.type = "text";
+//     commentInput.placeholder = "write comment";
+//     commentInput.classList.add(
+//       "mb-3",
+//       "custom-input",
+//       "w-100",
+//       "px-2",
+//       "disabled"
+//     );
+//     experinceContentContainer.append(commentInput);
+
+//     //   // Create and append the reactions container
+//     const reactionsContainer = document.createElement("div");
+//     reactionsContainer.classList.add("d-flex", "justify-content-start", "mb-3");
+
+//     const addReactionSpan = document.createElement("span");
+//     addReactionSpan.classList.add("me-3");
+//     addReactionSpan.textContent = "+";
+
+//     const commentsSpan = document.createElement("span");
+//     commentsSpan.classList.add("ms-3");
+//     commentsSpan.textContent = `10 Коментари`;
+
+//     const reactionsSpan = document.createElement("span");
+//     reactionsSpan.classList.add("ms-3");
+//     reactionsSpan.textContent = `50 Реакции`;
+
+//     reactionsContainer.appendChild(addReactionSpan);
+//     reactionsContainer.appendChild(commentsSpan);
+//     reactionsContainer.appendChild(reactionsSpan);
+
+//     experinceContentContainer.appendChild(reactionsContainer);
+//     experienceContainer.appendChild(experinceContentContainer);
+//     experienceList.appendChild(experienceContainer);
+//   });
+// }
+// function handleAddExperience(event) {
+//   event.preventDefault();
+//   const username = experienceForm.username.value.trim();
+//   const content = experienceForm.experienceContent.value.trim();
+//   if (!username || !content) {
+//     alert("All fields are required!");
+//     return;
+//   }
+//   const newExperience = new Experience(username, content);
+//   experiences.push(newExperience);
+//   experiences.sort((a, b) => new Date(a.datetime) - new Date(b.datetime));
+//   sessionStorage.setItem("experiences", JSON.stringify(experiences));
+//   renderExperiences();
+//   experienceForm.reset();
+// }
+// experienceForm.addEventListener("submit", handleAddExperience);
+
 let activeCategories = new Set();
 //save active categories to session storage
 function saveActiveCategories() {
@@ -203,6 +274,7 @@ loginForm.addEventListener("submit", (event) => {
       return response.json();
     })
     .then((_) => {
+      //console.log(data);
       localStorage.setItem(USERNAME_STORAGE_KEY, username);
       onLogin();
       location.hash = "content";
@@ -343,6 +415,7 @@ cards.forEach((card) => {
 window.addEventListener("load", () => {
   handleRoute();
   onLogin();
+  // renderExperiences();
 });
 
 window.addEventListener("hashchange", () => {

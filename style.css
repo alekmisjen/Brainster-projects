@@ -139,6 +139,16 @@ p {
   margin-right: 20px;
   margin-bottom: 20px;
 }
+
+.еxperiances-post {
+  border-radius: 16px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.1);
+  border: 2px solid white;
+  border-bottom: none;
+}
 .custom-card p {
   color: #152347;
   font-size: 16px;
@@ -254,7 +264,7 @@ form i {
 footer a.nav-link {
   color: white !important;
 }
-.discussion-card {
+.еxperiances-share {
   border: 1px solid white;
   border-radius: 16px;
 }
@@ -262,6 +272,16 @@ footer a.nav-link {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #42356b;
+}
+*:focus {
+  outline: none !important;
+}
+.experienceForm button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  box-shadow: none;
 }
 .custom-footer {
   width: 100%;

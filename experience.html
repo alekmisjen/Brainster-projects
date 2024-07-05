@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event and Experience Manager</title>
+    <style>
+      .event-color {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <form id="eventForm">
+      <input
+        type="text"
+        id="eventName"
+        name="eventName"
+        placeholder="Event Name"
+        required
+      />
+      <input type="date" id="eventDate" name="eventDate" required />
+      <input type="time" id="eventTime" name="eventTime" required />
+      <input type="color" id="eventColor" name="eventColor" required />
+      <button type="submit">Add Event</button>
+      <button type="button" id="midnightButton">Set Midnight</button>
+    </form>
+    <div id="eventList"></div> -->
+
+    <form id="experienceForm">
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Username"
+        required
+      />
+      <textarea
+        id="experienceContent"
+        name="experienceContent"
+        placeholder="Share your experience..."
+        required
+      ></textarea>
+      <button type="submit">Share Experience</button>
+    </form>
+    <div id="experienceList"></div>
+
+    <script>
+      // class Event {
+      //   constructor(name, date, time, color) {
+      //     this.name = name;
+      //     this.datetime = new Date(`${date}T${time}`);
+      //     this.color = color;
+      //   }
+      // }
+      class Experience {
+        constructor(username, content) {
+          this.username = username;
+          this.content = content;
+          this.datetime = new Date();
+        }
+      }
+      // function getEventsFromLocalStorage() {
+      //   const eventsFromLS = JSON.parse(localStorage.getItem("events"));
+      //   if (!eventsFromLS) return [];
+      //   eventsFromLS.forEach((event) => {
+      //     event.datetime = new Date(event.datetime);
+      //   });
+      //   return eventsFromLS;
+      // }
+      function getExperiencesFromSessionStorage() {
+        const experiencesFromSS = JSON.parse(
+          sessionStorage.getItem("experiences")
+        );
+        if (!experiencesFromSS) return [];
+        experiencesFromSS.forEach((experience) => {
+          experience.datetime = new Date(experience.datetime);
+        });
+        return experiencesFromSS;
+      }
+      // const events = getEventsFromLocalStorage();
+      const experiences = getExperiencesFromSessionStorage();
+      //const form = document.querySelector("#eventForm");
+      const experienceForm = document.querySelector("#experienceForm");
+      // const eventList = document.querySelector("#eventList");
+      const experienceList = document.querySelector("#experienceList");
+      //const midnightButton = document.querySelector("#midnightButton");
+      // function calculateRemainingTime({ datetime, color }) {
+      //   const now = new Date();
+      //   const remainingTime = datetime - now;
+      //   if (remainingTime < 0) {
+      //     document.body.style.backgroundColor = color;
+      //     return `Event has passed. `;
+      //   }
+      //   const days = Math.floor(remainingTime / MILISECONDS_IN_A_DAY);
+      //   const hours = Math.floor((remainingTime / MILISECONDS_IN_AN_HOUR) % 24);
+      //   const minutes = Math.floor(
+      //     (remainingTime / MILISECONDS_IN_A_MINUTE) % 60
+      //   );
+      //   const seconds = Math.floor(
+      //     (remainingTime / MILISECONDS_IN_A_SECOND) % 60
+      //   );
+      //   return `${days}d ${hours}h ${minutes}m
+      //   ${seconds}s`;
+      // }
+      // function showEvents() {
+      //   eventList.innerHTML = "";
+      //   events.forEach((event) => {
+      //     const eventParagraph = document.createElement("p");
+      //     eventParagraph.innerHTML = `${event.name} `;
+      //     const spanDatetime = document.createElement("span");
+      //     spanDatetime.innerHTML = calculateRemainingTime(event);
+      //     setInterval(() => {
+      //       spanDatetime.innerHTML = calculateRemainingTime(event);
+      //     }, 1000);
+      //     const spanColor = document.createElement("span");
+      //     spanColor.classList.add("event-color");
+      //     spanColor.style.backgroundColor = event.color;
+      //     eventParagraph.appendChild(spanDatetime);
+      //     eventParagraph.appendChild(spanColor);
+      //     eventList.appendChild(eventParagraph);
+      //   });
+      //   setInterval(() => {
+      //     document
+      //       .querySelectorAll("#eventList span")
+      //       .forEach((span, index) => {
+      //         span.innerHTML = calculateRemainingTime(events[index]);
+      //       });
+      //   }, 1000);
+      // }
+      function showExperiences() {
+        //experienceList.innerHTML = "";
+        experiences.forEach((experience) => {
+          const experienceDiv = document.createElement("div");
+          const datetime = experience.datetime.toLocaleString();
+          experienceDiv.innerHTML = `<strong
+          >${experience.username}</strong
+        >
+        (${datetime}): ${experience.content}`;
+          experienceList.appendChild(experienceDiv);
+        });
+      }
+      // function handleAddEvent(event) {
+      //   event.preventDefault();
+      //   const name = form.eventName.value;
+      //   const date = form.eventDate.value;
+      //   const time = form.eventTime.value;
+      //   const color = form.eventColor.value;
+      //   const newEvent = new Event(name, date, time, color);
+      //   events.push(newEvent);
+      //   localStorage.setItem("events", JSON.stringify(events));
+      //   showEvents();
+      //   form.reset();
+      // }
+      function handleAddExperience(event) {
+        event.preventDefault();
+        const username = experienceForm.username.value.trim();
+        const content = experienceForm.experienceContent.value.trim();
+        if (!username || !content) {
+          alert("All fields are required!");
+          return;
+        }
+        const newExperience = new Experience(username, content);
+        experiences.push(newExperience);
+        sessionStorage.setItem("experiences", JSON.stringify(experiences));
+        showExperiences();
+        experienceForm.reset();
+      }
+      // function handleSetMidnight() {
+      //   form.eventTime.value = "00:00";
+      // }
+      // form.addEventListener("submit", handleAddEvent);
+      experienceForm.addEventListener("submit", handleAddExperience);
+      //midnightButton.addEventListener("click", handleSetMidnight);
+      window.addEventListener("load", () => {
+        // showEvents();
+        showExperiences();
+      });
+    </script>
+  </body>
+</html>
