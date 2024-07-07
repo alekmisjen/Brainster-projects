@@ -3,50 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Example 1</title>
+    <title>Safeblink</title>
   </head>
   <body>
-    <ul id="users"></ul>
-    <button id="showMore">Show more</button>
-    <script>
-      const usersList = document.getElementById("users");
-      const showMoreButton = document.getElementById("showMore");
-      let page = 1;
+    <header style="margin-bottom: 50px">
+      <nav>
+        <a href="#home">Home</a>
+        <a id="login-link" href="#login">Login</a>
+        <a id="profile-link" href="#profile">Profile</a>
+        <button id="logout-btn" style="float: right; display: inline">
+          Log out
+        </button>
+      </nav>
+    </header>
 
-      function getRandomUsers() {
-        const response = fetch(
-          `https://randomuser.me/api/?page=${page++}&results=10`
-        );
-        response
-          .then((result) => result.json())
-          .then((data) => {
-            const users = data.results;
-            users.forEach(
-              ({ picture, name: { title, first, last }, email, phone }) => {
-                // (user) => {
-                // const { picture, name: { title, first, last }, email, phone } = user;
-                const listItem = document.createElement("li");
-                listItem.innerHTML = `<img src="${picture.thumbnail}"/>
-            <p>Name: ${title} ${first} ${last}
-            </p> <p>Email: ${email}</p>
-            <p>Phone: ${phone}</p>`;
-                usersList.appendChild(listItem);
-              }
-            );
-            console.log(users);
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      }
+    <section id="home">
+      <h3>Home page</h3>
+    </section>
 
-      // function handleOnShowMore() {
-      //   page++;
-      //   getRandomUsers();
-      // }
+    <section id="login">
+      <h3 style="margin-bottom: 20px">Login page</h3>
+      <div>
+        <form id="login-form">
+          <div>
+            <input type="text" id="username" />
+          </div>
+          <div>
+            <input type="password" id="password" />
+          </div>
+          <button type="submit">Најави се</button>
+        </form>
+      </div>
+    </section>
 
-      showMoreButton.addEventListener("click", getRandomUsers);
-      window.addEventListener("load", getRandomUsers);
-    </script>
+    <section id="profile">
+      <h3>Profile page</h3>
+    </section>
+
+    <footer style="margin-top: 50px">Footer</footer>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

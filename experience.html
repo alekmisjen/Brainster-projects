@@ -62,14 +62,14 @@
           this.datetime = new Date();
         }
       }
-      // function getEventsFromLocalStorage() {
-      //   const eventsFromLS = JSON.parse(localStorage.getItem("events"));
-      //   if (!eventsFromLS) return [];
-      //   eventsFromLS.forEach((event) => {
-      //     event.datetime = new Date(event.datetime);
-      //   });
-      //   return eventsFromLS;
-      // }
+      function getEventsFromLocalStorage() {
+        const eventsFromLS = JSON.parse(localStorage.getItem("events"));
+        if (!eventsFromLS) return [];
+        eventsFromLS.forEach((event) => {
+          event.datetime = new Date(event.datetime);
+        });
+        return eventsFromLS;
+      }
       function getExperiencesFromSessionStorage() {
         const experiencesFromSS = JSON.parse(
           sessionStorage.getItem("experiences")
