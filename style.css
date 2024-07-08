@@ -142,6 +142,7 @@ p {
 .comment-cards {
   background-color: transparent;
   border: 2px solid rgba(21, 35, 71, 0.5);
+
   border-radius: 16px;
 }
 
@@ -149,10 +150,10 @@ p {
   border-radius: 16px;
   margin-right: 20px;
   margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.1);
-  border: 2px solid white;
+  background-color: transparent;
+
   border-bottom: none;
+  border: 2px solid rgba(21, 35, 71, 0.5);
 }
 .custom-card p {
   color: #152347;
@@ -277,6 +278,10 @@ footer a.nav-link {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #42356b;
+}
+.comment-input {
+  background-color: transparent;
+  border: none;
 }
 *:focus {
   outline: none !important;

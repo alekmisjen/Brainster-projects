@@ -190,7 +190,7 @@
     </section>
     <!-- Modal -->
 
-    <!-- <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-body">
@@ -202,29 +202,30 @@
                   doloremque assumenda, nostrum, quo iste ratione ea iure nisi
                   necessitatibus magnam accusamus magni.
                 </p>
-                <form id="experienceForm" class="p-3 experienceForm">
+                <form id="commentsForm" class="p-3 еxperiances-post">
                   <textarea
-                    id="experienceContent"
-                    name="experienceContent"
-                    placeholder="Сподели искуство"
-                    class="mb-3 custom-input w-100 px-2"
+                    id="commentContent"
+                    name="commentContent"
+                    placeholder="Остави коментар"
+                    class="custom-input w-100 mb-3"
                     required
                   ></textarea>
-                  <input
-                    type="text"
-                    id="exusername"
-                    name="username"
-                    placeholder="Username"
-                    class="custom-input"
-                    required
-                  />
+                  <div class="d-flex mb-3">
+                    <img src="images/user1.png" />
+                    <input
+                      type="text"
+                      id="commentUsername"
+                      name="commentUsername"
+                      placeholder="Име и презиме"
+                      class="comment-input w-100 ms-3"
+                      required
+                    />
+                  </div>
 
-                  <button type="submit" class="text-right">
-                    Share Experience
-                  </button>
+                  <button type="submit" class="submitButton">Send</button>
                 </form>
-                <div id="comment-cards" class="comment-cards">
-                  <p class="p-3">
+                <div id="commentsList" class="comment-cards">
+                  <!-- <p class="p-3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Aliquid velit cum expedita accusantium quasi consequatur est
                     fugiat. Illo quas culpa beatae quos commodi, quibusdam
@@ -235,7 +236,7 @@
 
                     <span>John Doe</span>
                     <span class="text-right">Date</span>
-                  </div>
+                  </div> -->
                 </div>
               </div>
 
@@ -257,7 +258,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <section id="discussion">
       <div class="container">
@@ -280,11 +281,12 @@
               <input
                 type="text"
                 id="experiensUsername"
-                name="username"
+                name="experiensUsername"
                 placeholder="Username"
                 class="custom-input"
                 required
               />
+
               <button type="submit" class="text-right">Share Experience</button>
             </form>
           </div>
@@ -492,6 +494,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/cardsList.js"></script>
+    <script src="js/comments.js"></script>
+    <script src="js/experiences.js"></script>
+
     <script src="js/script.js"></script>
     <!-- <script src="js/test.js"></script> -->
   </body>
