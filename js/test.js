@@ -1,4 +1,3 @@
-//pages
 const homePage = document.querySelector("#home");
 const contentPage = document.querySelector("#content");
 const discussionPage = document.querySelector("#discussion");
@@ -38,7 +37,6 @@ function getExperiencesFromSessionStorage() {
     experience.datetime = new Date(experience.datetime);
   });
   return experiencesFromSS;
-  //return experiencesFromSS ? experiencesFromSS : [];
 }
 const experiences = getExperiencesFromSessionStorage();
 const experienceForm = document.querySelector("#experienceForm");
@@ -49,10 +47,9 @@ function getRandomColor() {
 
 const experienceList = document.querySelector("#experienceList");
 function renderExperiences() {
-  experienceList.innerHTML = "";
   experiences.forEach((experience) => {
     const experienceContainer = document.createElement("div");
-    experienceContainer.classList.add("w-100", "m-2", "discussion-content");
+    experienceContainer.classList.add("w-25", "m-2", "discussion-content");
     experienceContainer.style.backgroundColor = getRandomColor();
     // Create inner content container
     const experinceContentContainer = document.createElement("div");
@@ -126,8 +123,7 @@ function renderExperiences() {
 }
 function handleAddExperience(event) {
   event.preventDefault();
-
-  const username = experienceForm.experiensUsername.value.trim();
+  const username = experienceForm.username.value.trim();
   const content = experienceForm.experienceContent.value.trim();
   if (!username || !content) {
     alert("All fields are required!");
@@ -234,11 +230,11 @@ if (typeof cards !== "undefined") {
 }
 
 function isUserAuthenticated() {
-  return Boolean(sessionStorage.getItem(USERNAME_STORAGE_KEY));
+  return Boolean(localStorage.getItem(USERNAME_STORAGE_KEY));
 }
 function onLogout() {
   logoutBtn.addEventListener("click", () => {
-    sessionStorage.removeItem(USERNAME_STORAGE_KEY);
+    localStorage.removeItem(USERNAME_STORAGE_KEY);
     sessionStorage.removeItem(FILTER_STORAGE_KEY);
     onLogin();
     location.hash = "login";
@@ -278,9 +274,8 @@ loginForm.addEventListener("submit", (event) => {
     })
     .then((_) => {
       //console.log(data);
-      sessionStorage.setItem(USERNAME_STORAGE_KEY, username);
+      localStorage.setItem(USERNAME_STORAGE_KEY, username);
       onLogin();
-      saveActiveCategories();
       location.hash = "content";
       //console.log("success");
     })
