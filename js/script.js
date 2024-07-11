@@ -17,8 +17,18 @@ const profileLink = document.querySelector(".profile-link");
 
 const logoutBtn = document.querySelector("#logout-btn");
 
+const profileForm = document.querySelector("#profile-form");
+const profileUsername = document.querySelector("#profileUsername");
+
+const profileEmailInput = document.querySelector("#profile-email");
+const birthYearInput = document.querySelector("#birth-year");
+const updateEmail = document.querySelector("#update-email");
+const updateBirthYear = document.querySelector("#update-birth");
+
 const USERNAME_STORAGE_KEY = "currentUsername";
 const FILTER_STORAGE_KEY = "activeFilters";
+const USER_DATA_STORAGE_KEY = "userData";
+
 // Random backround color when discussion cart is created
 //const experiencesBoard = document.querySelectorAll(".experience-card");
 const backgroundColor = ["#4B7CF3", "#83EAB1", "#764FF0", "#8F39EC"];
@@ -120,6 +130,38 @@ if (typeof cards !== "undefined") {
 function isUserAuthenticated() {
   return Boolean(sessionStorage.getItem(USERNAME_STORAGE_KEY));
 }
+function saveUserData() {
+  const username = sessionStorage.getItem(USERNAME_STORAGE_KEY);
+  if (username) {
+    const userData = {
+      email: profileEmailInput.value,
+      birthYear: birthYearInput.value,
+    };
+    sessionStorage.setItem(
+      `${USER_DATA_STORAGE_KEY}_${username}`,
+      JSON.stringify(userData)
+    );
+  }
+}
+function loadUserdata() {
+  const username = sessionStorage.getItem(USERNAME_STORAGE_KEY);
+  if (username) {
+    const userData = JSON.parse(
+      sessionStorage.getItem(`${USER_DATA_STORAGE_KEY}_${username}`)
+    );
+    if (userData) {
+      profileEmailInput.value = userData.email || "";
+      birthYearInput.value = userData.birthYear || "";
+    }
+  }
+}
+updateEmail.addEventListener("click", () => {
+  saveUserData();
+  updateButtonLabel();
+});
+updateBirthYear.addEventListener("click", () => {
+  saveUserData();
+});
 function onLogout() {
   logoutBtn.addEventListener("click", () => {
     sessionStorage.removeItem(USERNAME_STORAGE_KEY);
@@ -128,12 +170,28 @@ function onLogout() {
     location.hash = "login";
   });
 }
+function updateButtonLabel() {
+  const username = sessionStorage.getItem(USERNAME_STORAGE_KEY);
+  if (username) {
+    const userData = JSON.parse(
+      sessionStorage.getItem(`${USER_DATA_STORAGE_KEY}_${username}`)
+    );
+    if (userData && userData.email) {
+      updateEmail.textContent = "Edit Email";
+    } else {
+      updateEmail.textContent = "Add Email";
+    }
+  }
+}
 function onLogin() {
   const isAuthenticated = isUserAuthenticated();
   if (isAuthenticated) {
     loginLink.style.display = "none";
     profileLink.style.display = "block";
     logoutBtn.style.display = "block";
+    profileUsername.value = sessionStorage.getItem(USERNAME_STORAGE_KEY);
+    updateEmail.textContent = loadUserdata();
+    updateButtonLabel();
     onLogout();
   } else {
     loginLink.style.display = "block";
@@ -303,7 +361,7 @@ cards.forEach((card) => {
 window.addEventListener("load", () => {
   handleRoute();
   onLogin();
-  //renderExperiences();
+  renderExperiences();
   renderComments();
 });
 

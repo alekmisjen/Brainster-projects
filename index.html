@@ -262,7 +262,7 @@
 
     <section id="discussion">
       <div class="container">
-        <div class="title text-center">
+        <div class="title">
           <h1 class="">Табла за дискусии</h1>
         </div>
         <div
@@ -278,14 +278,8 @@
                 class="mb-3 custom-input w-100 px-2"
                 required
               ></textarea>
-              <input
-                type="text"
-                id="experiensUsername"
-                name="experiensUsername"
-                placeholder="Username"
-                class="custom-input"
-                required
-              />
+              <img src="./images/user1.png" />
+              <p id="currentUsername"></p>
 
               <button type="submit" class="text-right">Share Experience</button>
             </form>
@@ -301,7 +295,124 @@
       <p>Contact page</p>
     </section>
     <section id="profile">
-      <p>profile page</p>
+      <div class="container d-grid gap-2 py-3">
+        <div class="title">
+          <h1 class="">Профил</h1>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col-lg-3 profile-img mx-auto">
+            <img src="images/profile_img.png" />
+          </div>
+          <div class="col-lg-7 ms-5">
+            <form id="profile-form">
+              <div class="row">
+                <div class="col">
+                  <div class="form-group mb-4">
+                    <label for="profileUsername">Username</label>
+                    <div class="input-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="profileUsername"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="profile-email">Email address</label>
+                    <div class="input-group mb-3">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="profile-email"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter email"
+                      />
+                      <div class="input-group-append">
+                        <button
+                          class="btn btn-outline-secondary"
+                          id="update-email"
+                          type="button"
+                        >
+                          Add Email
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="userPassword">Password</label>
+                    <div class="input-group mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="userPassword"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group mb-4">
+                    <label for="birth-year">Birth Year</label>
+                    <div class="input-group mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="birth-year"
+                        placeholder="2007"
+                      />
+                      <div class="input-group-append">
+                        <button
+                          class="btn btn-outline-secondary"
+                          id="update-birth"
+                          type="button"
+                        >
+                          Button
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="gender">Gender</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="gender"
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <p class="d-flex justify-content-between text-white">
+          <span>Следи го својот Safeblink напредок</span>
+          <span>Моментално ниво: lorem ipsum</span>
+        </p>
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 30%"
+            aria-valuenow="30"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+        <div class="badges d-flex mt-5 mx-auto">
+          <img src="images/badge1.png" />
+          <img src="images/badge2.png" />
+
+          <img src="images/badge3.png" />
+
+          <img src="images/badge4.png" />
+
+          <img src="images/badge5.png" />
+
+          <img src="images/badge6.png" />
+        </div>
+      </div>
     </section>
     <section id="login">
       <div class="container">
@@ -496,6 +607,7 @@
     <script src="js/cardsList.js"></script>
     <script src="js/comments.js"></script>
     <script src="js/experiences.js"></script>
+    <!-- <script src="js/filters.js"></script> -->
 
     <script src="js/script.js"></script>
     <!-- <script src="js/test.js"></script> -->

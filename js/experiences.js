@@ -15,93 +15,72 @@ function getExperiencesFromSessionStorage() {
   return experiencesFromSS;
   //return experiencesFromSS ? experiencesFromSS : [];
 }
-const experiences = getExperiencesFromSessionStorage();
+
+const experienceData = [
+  new Experience(
+    "John Doe",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati."
+  ),
+  new Experience(
+    "Alice Doe",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati."
+  ),
+  new Experience(
+    "Steven Doe",
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, obcaecati."
+  ),
+];
+
+const experiencesFromSS = getExperiencesFromSessionStorage();
+const experiences = [...experiencesFromSS, ...experienceData];
 const experienceForm = document.querySelector("#experienceForm");
 experiences.sort((a, b) => new Date(b.datetime) - new Date(a.datetime));
 
 const experienceList = document.querySelector("#experienceList");
 function renderExperiences() {
+  //const username = sessionStorage.getItem(USERNAME_STORAGE_KEY);
   experienceList.innerHTML = "";
   experiences.forEach((experience) => {
     const experienceContainer = document.createElement("div");
     experienceContainer.classList.add("w-100", "m-2", "discussion-content");
     experienceContainer.style.backgroundColor = getRandomColor();
+
     // Create inner content container
     const experinceContentContainer = document.createElement("div");
     experinceContentContainer.classList.add("p-3");
 
-    //Create and append the content paragraph
-    const contentParagraph = document.createElement("p");
-    contentParagraph.textContent = `${experience.content}`;
-    experinceContentContainer.appendChild(contentParagraph);
+    // Create and append the content paragraph
+    experinceContentContainer.innerHTML = `
+        <p>${experience.content}</p>
+        <div class="mb-3">
+          <p class="d-flex align-items-center">
+            <img src="images/user1.png" alt="User Image">
+            <span class="ms-3">${experience.username}</span>
+            <span class="ms-5">${experience.datetime
+              .toLocaleString()
+              .replace("AM", "")
+              .replace("PM", "")}</span>
+          </p>
+        </div>
+        <input type="text" placeholder="write comment" class="mb-3 custom-input w-100 px-2 disabled">
+        <div class="d-flex justify-content-start mb-3">
+          <span class="me-3">+</span>
+          <span class="ms-3">10 Коментари</span>
+          <span class="ms-3">50 Реакции</span>
+        </div>
+      `;
 
-    //   // Create and append the user info container
-    const userInfoContainer = document.createElement("div");
-    userInfoContainer.classList.add("mb-3");
-    const userInfoParagraph = document.createElement("p");
-    userInfoParagraph.classList.add("d-flex", "align-items-center");
-
-    const userImage = document.createElement("img");
-    userImage.src = `images/user1.png`;
-
-    const usernameSpan = document.createElement("span");
-    usernameSpan.classList.add("ms-3");
-    usernameSpan.textContent = `${experience.username}`;
-    const dateSpan = document.createElement("span");
-    dateSpan.classList.add("ms-5");
-    dateSpan.textContent = `${experience.datetime
-      .toLocaleString()
-      .replace("AM", "")
-      .replace("PM", "")}`;
-
-    userInfoParagraph.append(userImage, usernameSpan, dateSpan);
-    userInfoContainer.append(userInfoParagraph);
-    experinceContentContainer.append(userInfoContainer);
-
-    //   // Create and append the comment input
-    const commentInput = document.createElement("input");
-    commentInput.type = "text";
-    commentInput.placeholder = "write comment";
-    commentInput.classList.add(
-      "mb-3",
-      "custom-input",
-      "w-100",
-      "px-2",
-      "disabled"
-    );
-    experinceContentContainer.append(commentInput);
-
-    //   // Create and append the reactions container
-    const reactionsContainer = document.createElement("div");
-    reactionsContainer.classList.add("d-flex", "justify-content-start", "mb-3");
-
-    const addReactionSpan = document.createElement("span");
-    addReactionSpan.classList.add("me-3");
-    addReactionSpan.textContent = "+";
-
-    const commentsSpan = document.createElement("span");
-    commentsSpan.classList.add("ms-3");
-    commentsSpan.textContent = `10 Коментари`;
-
-    const reactionsSpan = document.createElement("span");
-    reactionsSpan.classList.add("ms-3");
-    reactionsSpan.textContent = `50 Реакции`;
-
-    reactionsContainer.appendChild(addReactionSpan);
-    reactionsContainer.appendChild(commentsSpan);
-    reactionsContainer.appendChild(reactionsSpan);
-
-    experinceContentContainer.appendChild(reactionsContainer);
     experienceContainer.appendChild(experinceContentContainer);
     experienceList.appendChild(experienceContainer);
   });
 }
+
 function handleAddExperience(event) {
   event.preventDefault();
 
-  const exUsername = experienceForm.experiensUsername.value.trim();
+  const exUsername = sessionStorage.getItem(USERNAME_STORAGE_KEY);
   const exContent = experienceForm.experienceContent.value.trim();
-  if (!exUsername || !exContent) {
+  if (!exContent) {
     alert("All fields are required!");
     return;
   }
@@ -111,5 +90,12 @@ function handleAddExperience(event) {
   sessionStorage.setItem("experiences", JSON.stringify(experiences));
   renderExperiences();
   experienceForm.reset();
+  document.getElementById("currentUsername").textContent = exUsername;
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const username =
+    sessionStorage.getItem(USERNAME_STORAGE_KEY) || "Default Username";
+  document.getElementById("currentUsername").textContent = username;
+  renderExperiences();
+});
 experienceForm.addEventListener("submit", handleAddExperience);
