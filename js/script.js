@@ -28,14 +28,14 @@ const updateBirthYear = document.querySelector("#update-birth");
 const USERNAME_STORAGE_KEY = "currentUsername";
 const FILTER_STORAGE_KEY = "activeFilters";
 const USER_DATA_STORAGE_KEY = "userData";
-
+let currentCardId;
 // Random backround color when discussion cart is created
 //const experiencesBoard = document.querySelectorAll(".experience-card");
 const backgroundColor = ["#4B7CF3", "#83EAB1", "#764FF0", "#8F39EC"];
 function getRandomColor() {
   return backgroundColor[Math.floor(Math.random() * backgroundColor.length)];
 }
-
+let clickedCards = new Set();
 let activeCategories = new Set();
 //save active categories to session storage
 function saveActiveCategories() {
@@ -52,7 +52,7 @@ function loadActiveCategories() {
     const savedCategories = JSON.parse(
       sessionStorage.getItem(FILTER_STORAGE_KEY)
     );
-    if (savedCategories && savedCategories > 0) {
+    if (savedCategories && savedCategories.length > 0) {
       activeCategories = new Set(savedCategories);
     }
   }
@@ -66,10 +66,11 @@ function createButtonPills(categories) {
     const button = document.createElement("button");
     button.textContent = category; // Set the button text to the category name
     button.classList.add("custom-btn");
+    if (activeCategories.has(category)) {
+      button.classList.add("active");
+    }
     button.addEventListener("click", () => {
       toggleCategory(category, button);
-      //console.log(`Button ${category} clicked`);
-      //location.hash = `category/${tag}`;
     });
     pillsDiv.appendChild(button); // Append the button to the container
   });
@@ -86,12 +87,13 @@ function toggleCategory(category, button) {
   displayCardsByCategory();
 }
 function displayCardsByCategory() {
-  // const cardList = document.querySelector("#cards-container");
-
   cardList.innerText = "";
 
   if (activeCategories.size === 0) {
-    cards.forEach((card) => renderCard(card));
+    cards.forEach((card) => {
+      const showCard = renderCard(card);
+      cardList.appendChild(showCard);
+    });
   } else {
     const filteredCards = cards.filter((card) =>
       card.categories.some((category) => activeCategories.has(category))
@@ -189,6 +191,8 @@ function onLogin() {
     loginLink.style.display = "none";
     profileLink.style.display = "block";
     logoutBtn.style.display = "block";
+    document.querySelector("#experienceForm").style.display = "block";
+    commentForm.style.display = "block";
     profileUsername.value = sessionStorage.getItem(USERNAME_STORAGE_KEY);
     updateEmail.textContent = loadUserdata();
     updateButtonLabel();
@@ -197,6 +201,8 @@ function onLogin() {
     loginLink.style.display = "block";
     profileLink.style.display = "none";
     logoutBtn.style.display = "none";
+    document.querySelector("#experienceForm").style.display = "none";
+    commentForm.style.display = "none";
   }
 }
 loginForm.addEventListener("submit", (event) => {
@@ -330,9 +336,7 @@ function handleRoute() {
 function renderCard(card) {
   const container = document.createElement("div");
   container.classList.add("content-card", "mb-3");
-  // container.addEventListener("click", () => {
-  //   location.hash = `videodetails/${card.id}`;
-  // });
+
   const cardImage = document.createElement("div");
   cardImage.classList.add("card-image");
   const img = document.createElement("img");
@@ -349,14 +353,47 @@ function renderCard(card) {
   overlay.append(title, desc);
   cardImage.appendChild(img);
   container.append(cardImage, overlay);
-
+  container.addEventListener("click", function () {
+    openModal(card);
+    trackCardClick(card.id);
+  });
   return container;
+}
+function openModal(card) {
+  const modalTitle = document.querySelector("#modal-title");
+  const modalVideo = document.querySelector("#modal-image");
+  const modalDesc = document.querySelector("#modal-desc");
+
+  modalTitle.innerText = card.title;
+  modalVideo.src = card.image;
+  modalDesc.innerText = card.description;
+  const cardModal = new bootstrap.Modal(document.querySelector("#card-modal"));
+  cardModal.show();
+
+  currentCardId = card.id;
+  renderComments(card.id);
+}
+function trackCardClick(cardId) {
+  console.log(`Card clicked: ${cardId}`);
+  clickedCards.add(cardId);
+  console.log(`Unique cards clicked: ${clickedCards.size}`);
+  if (clickedCards.size >= 5) {
+    showBadge();
+  }
+}
+function showBadge() {
+  const badge2 = document.getElementById("badge2");
+  if (badge2) {
+    badge2.style.display = "block";
+    //console.log("Badge displayed!"); // Debug log
+  } else {
+    badge2.style.display = "none"; // Error log
+  }
 }
 cards.forEach((card) => {
   const showCard = renderCard(card);
   cardList.append(showCard);
 });
-// Handling login form
 
 window.addEventListener("load", () => {
   handleRoute();

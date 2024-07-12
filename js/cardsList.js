@@ -1,7 +1,7 @@
 let cards = [
   {
     id: "1",
-    title: "Наслов на видео",
+    title: "Наслов на видео1",
     image: "images/img1.png",
     //videoId: "XTHUcQuybEk",
     description:
@@ -10,7 +10,7 @@ let cards = [
   },
   {
     id: "2",
-    title: "Наслов на видео",
+    title: "Наслов на видео2",
     image: "images/img2.png",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laboriosam eveniet corporis a soluta tempore!",
@@ -18,7 +18,7 @@ let cards = [
   },
   {
     id: "3",
-    title: "Наслов на видео",
+    title: "Наслов на видео3",
     image: "images/img3.png",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laboriosam eveniet corporis a soluta tempore!",
@@ -26,7 +26,7 @@ let cards = [
   },
   {
     id: "4",
-    title: "Наслов на видео",
+    title: "Наслов на видео4",
     image: "images/img4.png",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laboriosam eveniet corporis a soluta tempore!",

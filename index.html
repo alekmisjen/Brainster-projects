@@ -183,26 +183,26 @@
         <div
           class="container p-5 d-flex justify-content-center align-center mb-2"
           id="cards-container"
-          data-toggle="modal"
-          data-target="#myModal"
         ></div>
       </div>
     </section>
     <!-- Modal -->
 
-    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal fade" id="card-modal" role="dialog">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-body">
             <div class="row">
               <div class="col -6">
-                <p>
+                <h5 id="modal-title"></h5>
+                <p id="modal-desc"></p>
+                <!-- <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Totam beatae enim eum ipsam suscipit rerum provident iusto
                   doloremque assumenda, nostrum, quo iste ratione ea iure nisi
                   necessitatibus magnam accusamus magni.
-                </p>
-                <form id="commentsForm" class="p-3 еxperiances-post">
+                </p> -->
+                <form id="commentsForm" class="p-3 еxperiances-post card">
                   <textarea
                     id="commentContent"
                     name="commentContent"
@@ -224,25 +224,12 @@
 
                   <button type="submit" class="submitButton">Send</button>
                 </form>
-                <div id="commentsList" class="comment-cards">
-                  <!-- <p class="p-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid velit cum expedita accusantium quasi consequatur est
-                    fugiat. Illo quas culpa beatae quos commodi, quibusdam
-                    nesciunt dolore recusandae assumenda ab! Vitae.
-                  </p>
-                  <div class="d-flex align-items-center">
-                    <img src="./images/user3.png" />
-
-                    <span>John Doe</span>
-                    <span class="text-right">Date</span>
-                  </div> -->
-                </div>
+                <div id="commentsList"></div>
               </div>
 
               <div class="col-6">
-                <div class="video">
-                  <iframe
+                <img src="" class="card-img-top" id="modal-image" alt="Card Image">
+                  <!-- <iframe
                     width="516"
                     height="916"
                     src="https://www.youtube.com/embed/XTHUcQuybEk?si=yn5Cxo6fEHSavx40"
@@ -251,7 +238,7 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin"
                     allowfullscreen
-                  ></iframe>
+                  ></iframe> -->
                 </div>
               </div>
             </div>
@@ -265,29 +252,29 @@
         <div class="title">
           <h1 class="">Табла за дискусии</h1>
         </div>
-        <div
-          id="experience-posts-container"
-          class="container d-inline-flex flex-wrap mb-2 justify-content-center align-items-center align-center"
-        >
-          <div class="w-25 m-2 еxperiances-share">
-            <form id="experienceForm" class="p-3 experienceForm">
-              <textarea
-                id="experienceContent"
-                name="experienceContent"
-                placeholder="Сподели искуство"
-                class="mb-3 custom-input w-100 px-2"
-                required
-              ></textarea>
-              <img src="./images/user1.png" />
-              <p id="currentUsername"></p>
+        <div class="row">
+          <form
+            id="experienceForm"
+            class="p-3 experienceForm еxperiances-share col-md-4 h-25"
+          >
+            <textarea
+              id="experienceContent"
+              name="experienceContent"
+              placeholder="Сподели искуство"
+              class="mb-3 custom-input w-100 px-2"
+              required
+            ></textarea>
+            <img src="./images/user1.png" />
+            <p id="currentUsername"></p>
 
-              <button type="submit" class="text-right">Share Experience</button>
-            </form>
-          </div>
-          <div id="experienceList"></div>
+            <button type="submit" class="text-right">Share Experience</button>
+          </form>
+          <div
+            id="experienceList"
+            class="container-fluid d-flex flex-wrap mb-2 justify-content-center"
+          ></div>
         </div>
       </div>
-
       <!-- end cards  -->
     </section>
 
@@ -401,17 +388,14 @@
           ></div>
         </div>
         <div class="badges d-flex mt-5 mx-auto">
-          <img src="images/badge1.png" />
-          <img src="images/badge2.png" />
-
-          <img src="images/badge3.png" />
-
-          <img src="images/badge4.png" />
-
-          <img src="images/badge5.png" />
-
-          <img src="images/badge6.png" />
+          <img id="badge1" src="images/badge1.png" style="display: block;"  />
+          <img id="badge2" src="images/badge2.png" style="display: none;" />
+          <img id="badge3" src="images/badge3.png" style="display: none;" />
+          <img id="badge4" src="images/badge4.png" style="display: none;" />
+          <img id="badge5" src="images/badge5.png" style="display: none;" />
+          <img id="badge6" src="images/badge6.png" style="display: none;" />
         </div>
+        
       </div>
     </section>
     <section id="login">
@@ -607,7 +591,7 @@
     <script src="js/cardsList.js"></script>
     <script src="js/comments.js"></script>
     <script src="js/experiences.js"></script>
-    <!-- <script src="js/filters.js"></script> -->
+    <!-- <script src="js/modal.js"></script> -->
 
     <script src="js/script.js"></script>
     <!-- <script src="js/test.js"></script> -->

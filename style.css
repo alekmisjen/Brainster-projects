@@ -133,11 +133,15 @@ p {
   width: 100px;
   height: 100px;
 }
-.card-content,
-.discussion-content {
+.card-content {
   border-radius: 16px;
   margin-right: 20px;
   margin-bottom: 20px;
+}
+
+.discussion-content {
+  width: 30%;
+  border-radius: 16px;
 }
 .comment-cards {
   background-color: transparent;
@@ -270,6 +274,7 @@ form i {
 footer a.nav-link {
   color: white !important;
 }
+
 .еxperiances-share {
   border: 1px solid white;
   border-radius: 16px;
@@ -286,7 +291,7 @@ footer a.nav-link {
 *:focus {
   outline: none !important;
 }
-.experienceForm button {
+.еxperiances-share button {
   background-color: transparent;
   border: none;
   outline: none;

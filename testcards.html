@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discussion Board</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f0f0f0;
+      }
+      .container-custom {
+        margin-top: 20px;
+      }
+      .card-custom {
+        margin: 10px;
+        border-radius: 15px;
+      }
+      .card-custom .card-header {
+        background-color: #dff0d8;
+        border-radius: 15px 15px 0 0;
+      }
+      .card-custom .card-body {
+        background-color: #f5f5f5;
+      }
+      .card-custom .card-footer {
+        background-color: #dff0d8;
+        border-radius: 0 0 15px 15px;
+      }
+      .card-columns-custom {
+        column-count: 3;
+      }
+      .form-custom {
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container container-custom">
+      <!-- Discussion Cards and Input Form -->
+      <div class="card-columns card-columns-custom" id="discussionCards">
+        <!-- Input Form as a Card -->
+        <div class="card card-custom form-custom">
+          <div class="card-header">Post a New Discussion</div>
+          <div class="card-body">
+            <form id="discussionForm">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Enter your username"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="3"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Post</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Example Discussion Cards -->
+        <div class="card card-custom">
+          <div class="card-header">User123</div>
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Number of comments: 5</small>
+          </div>
+        </div>
+        <div class="card card-custom">
+          <div class="card-header">John Doe</div>
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Number of comments: 84</small>
+          </div>
+        </div>
+        <div class="card card-custom">
+          <div class="card-header">John Doe</div>
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Number of comments: 84</small>
+          </div>
+        </div>
+        <div class="card card-custom">
+          <div class="card-header">John Doe</div>
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Number of comments: 84</small>
+          </div>
+        </div>
+        <div class="card card-custom">
+          <div class="card-header">John Doe</div>
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Number of comments: 84</small>
+          </div>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document
+        .getElementById("discussionForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var username = document.getElementById("username").value;
+          var message = document.getElementById("message").value;
+
+          var newCard = `
+                <div class="card card-custom">
+                    <div class="card-header">${username}</div>
+                    <div class="card-body">
+                        <p class="card-text">${message}</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Number of comments: 0</small>
+                    </div>
+                </div>
+            `;
+
+          document.getElementById("discussionCards").innerHTML += newCard;
+
+          document.getElementById("discussionForm").reset();
+        });
+    </script>
+  </body>
+</html>
