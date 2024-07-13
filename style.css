@@ -140,7 +140,7 @@ p {
 }
 
 .discussion-content {
-  width: 30%;
+  width: 100%;
   border-radius: 16px;
 }
 .comment-cards {
@@ -180,6 +180,26 @@ p {
   opacity: 0.4;
   box-shadow: 0px 8px 16px 0px rgba(66, 53, 107, 0.2);
 }
+.contact-button {
+  background-color: #9946f3;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+}
+.contact h3 {
+  color: #42356b;
+}
+.cardBG {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
 .modal-button {
   width: 80%;
   padding: 0 8px;
@@ -241,11 +261,11 @@ button.active {
   width: 100%;
   height: auto;
 }
+
 .card-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
-
   background-color: rgb(255, 255, 255, 0.2);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(5px);
@@ -376,6 +396,38 @@ footer a.nav-link {
 }
 #profile-form input::placeholder {
   color: white !important;
+}
+.card-title {
+  color: #764ff0 !important;
+}
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+.card-columns-custom {
+  column-count: 3;
+}
+.container-custom {
+  margin-top: 20px;
 }
 /* @media (max-width: 768px) {
   .title p {

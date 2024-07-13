@@ -287,17 +287,10 @@
               </div>
 
               <div class="col-6">
-                <img src="" class="card-img-top" id="modal-image" alt="Card Image">
-                  <!-- <iframe
-                    width="516"
-                    height="916"
-                    src="https://www.youtube.com/embed/XTHUcQuybEk?si=yn5Cxo6fEHSavx40"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe> -->
+                
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe id="modal-video" class="embed-responsive-item" allowfullscreen></iframe>
+                </div>
                 </div>
               </div>
             </div>
@@ -311,10 +304,42 @@
         <div class="title">
           <h1 class="">Табла за дискусии</h1>
         </div>
-        <div class="row">
+        <div class="container container-custom">
+          <!-- Discussion Cards and Input Form -->
+          <div class="card-columns-custom" id="discussionCards">
+            <!-- Input Form as a Card -->
+            <div class="card">
+              <div class="card-body">
+                <form
+                id="experienceForm"
+                class=" col-sm-12"
+              >
+                <textarea
+                  id="experienceContent"
+                  name="experienceContent"
+                  placeholder="Сподели искуство"
+                  class="mb-3 custom-input w-100 px-2"
+                  required
+                ></textarea>
+                <div class=" d-flex justify-content-start align-items-center flex-wrap">
+                <img src="./images/user1.png" />
+                <p id="currentUsername" class="ms-3"></p>
+               
+              </div>
+              <button type="submit" class="btn text-center">Share Experience</button>
+              </form>
+              </div>
+            </div>
+    
+            <!-- Example Discussion Cards -->
+            <div
+            id="experienceList"
+            class=""
+          ></div>
+        <!-- <div class="card-columns-custom card-columns">
           <form
             id="experienceForm"
-            class="p-3 experienceForm еxperiances-share col-md-4 h-25"
+            class="p-3 experienceForm еxperiances-share col-sm-12 col-lg-3"
           >
             <textarea
               id="experienceContent"
@@ -323,22 +348,71 @@
               class="mb-3 custom-input w-100 px-2"
               required
             ></textarea>
+            <div class="">
             <img src="./images/user1.png" />
-            <p id="currentUsername"></p>
-
-            <button type="submit" class="text-right">Share Experience</button>
+            <p id="currentUsername" class="ms-3"></p>
+          </div>
+          <button type="submit" class="text-right">Share Experience</button>
           </form>
           <div
             id="experienceList"
-            class="container-fluid d-flex flex-wrap mb-2 justify-content-center"
+            class=""
           ></div>
-        </div>
+        </div> -->
+      </div>
       </div>
       <!-- end cards  -->
     </section>
 
     <section id="contact">
-      <p>Contact page</p>
+     <div class="container d-grid gap-2 py-3 contact">
+      <div class="title">
+        <h1>Контакт</h1>
+      </div>
+      <div class="row">
+       
+        <h3 class="ms-3">Побарај стручна помош</h3>
+        
+        <div class="card mb-5 cardBG mx-auto">
+          <div class="card-body">
+            <h4 class="card-title ">Агенција за заштита на личните податоци</h4>
+            <div class="d-flex ">
+            <p class="card-text">Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. </p>
+            <a class="contact-button " href="#" role="button">Линк</a>
+            </div>
+          </div>
+        </div>
+        <h3 class="ms-3">Невладини организации</h3>
+        <div class="card mb-3 cardBG">
+          <div class="card-body">
+            <h4 class="card-title ">NGO 1</h4>
+            <div class="d-flex ">
+            <p class="card-text">Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. </p>
+            <a class="contact-button " href="#" role="button">Линк</a>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 cardBG">
+          <div class="card-body">
+            <h4 class="card-title ">NGO 2</h4>
+            <div class="d-flex ">
+            <p class="card-text">Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. </p>
+            <a class="contact-button " href="#" role="button">Линк</a>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 cardBG">
+          <div class="card-body">
+            <h4 class="card-title ">NGO 3</h4>
+            <div class="d-flex ">
+            <p class="card-text">Лорем ипсум е едноставен модел на текст кој се користел во печатарската индустрија. Лорем ипсум бил индустриски стандард кој се користел како модел уште пред 1500 години, кога непознат печатар зел кутија со букви и ги сложил на таков начин за да направи примерок на книга. </p>
+            <a class="contact-button " href="#" role="button">Линк</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
     </section>
     <section id="profile">
       <div class="container d-grid gap-2 py-3">
@@ -533,7 +607,8 @@
                 </div>
                 <a href="#" class="text-white">Ја заборави лозинката?</a>
               </div>
-              <button type="submit" class="custom-button w-50 mt-5">Namt0javi se</button>
+              <div class="text-center">
+              <button type="submit" class="custom-button w-50 mt-5">Најави се</button></div>
             </form>
           </div>
           

@@ -374,11 +374,11 @@ function renderCard(card) {
 }
 function openModal(card) {
   const modalTitle = document.querySelector("#modal-title");
-  const modalVideo = document.querySelector("#modal-image");
+  const modalVideo = document.querySelector("#modal-video");
   const modalDesc = document.querySelector("#modal-desc");
 
   modalTitle.innerText = card.title;
-  modalVideo.src = card.image;
+  modalVideo.src = `https://www.youtube.com/embed/${card.videoId}`;
   modalDesc.innerText = card.description;
   const cardModal = new bootstrap.Modal(document.querySelector("#card-modal"));
   cardModal.show();

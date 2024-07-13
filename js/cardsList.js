@@ -3,7 +3,7 @@ let cards = [
     id: "1",
     title: "Наслов на видео1",
     image: "images/img1.png",
-    //videoId: "XTHUcQuybEk",
+    videoId: "5MuIMqhT8DM",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laboriosam eveniet corporis a soluta tempore!",
     categories: ["актуелни", "најгледани", "азбучен редослед"],
@@ -12,6 +12,7 @@ let cards = [
     id: "2",
     title: "Наслов на видео2",
     image: "images/img2.png",
+    videoId: "xp0O2vi8DX4",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laboriosam eveniet corporis a soluta tempore!",
     categories: ["актуелни", "најгледани", "Интернет Видеа"],

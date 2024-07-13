@@ -49,7 +49,7 @@ function renderExperiences() {
   experienceList.innerHTML = "";
   experiences.forEach((experience) => {
     const experienceContainer = document.createElement("div");
-    experienceContainer.classList.add("col-md-3", "m-2", "discussion-content");
+    experienceContainer.classList.add("col-sm-12", "m-2", "discussion-content");
     experienceContainer.style.backgroundColor = getRandomColor();
 
     // Create inner content container
@@ -63,7 +63,7 @@ function renderExperiences() {
           <p class="d-flex align-items-center">
             <img src="${experience.image}" alt="User Image">
             <span class="ms-3">${experience.username}</span>
-            <span class="ms-5">${experience.datetime
+            <span class="ms-3">${experience.datetime
               .toLocaleString()
               .replace("AM", "")
               .replace("PM", "")}</span>
