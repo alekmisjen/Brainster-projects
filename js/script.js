@@ -10,7 +10,7 @@ const cardList = document.querySelector("#cards-container");
 
 const videoDetails = document.querySelector("#video-details");
 
-const loginForm = document.querySelector("#login-form");
+//const loginForm = document.querySelector("#login-form");
 
 const loginLink = document.querySelector(".login-link");
 const profileLink = document.querySelector(".profile-link");
@@ -205,38 +205,51 @@ function onLogin() {
     commentForm.style.display = "none";
   }
 }
-loginForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const username = document.querySelector("#username").value;
-  //console.log(username);
-  const password = document.querySelector("#password").value;
-  //console.log(password);
-  fetch("http://localhost:5000/api/authentication", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ username, password }),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Invalid credentials");
-      }
-      return response.json();
+function welcomeModalLogin() {
+  const welcomeModal = new bootstrap.Modal(
+    document.querySelector("#welcomeModal")
+  );
+  const loginForm = document.querySelector("#login-form");
+  const redirectToProfileBtn = document.querySelector("#redirectToProfile");
+
+  // Redirect to profile page when button in modal is clicked
+  redirectToProfileBtn.addEventListener("click", () => {
+    welcomeModal.hide();
+    location.hash = "profile";
+  });
+
+  // Handle form submission
+  loginForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const username = document.querySelector("#username").value;
+    const password = document.querySelector("#password").value;
+
+    fetch("http://localhost:5000/api/authentication", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
     })
-    .then((_) => {
-      //console.log(data);
-      sessionStorage.setItem(USERNAME_STORAGE_KEY, username);
-      onLogin();
-      saveActiveCategories();
-      location.hash = "content";
-      //console.log("success");
-    })
-    .catch((error) => {
-      console.log(`failure - ${error}`);
-      alert("invalid credentials.");
-    });
-});
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Invalid credentials");
+        }
+        return response.json();
+      })
+      .then((_) => {
+        sessionStorage.setItem(USERNAME_STORAGE_KEY, username);
+        onLogin();
+        saveActiveCategories();
+        location.hash = "login";
+        welcomeModal.show(); // Show the modal upon successful login
+      })
+      .catch((error) => {
+        console.log(`failure - ${error}`);
+        alert("invalid credentials.");
+      });
+  });
+}
 function handleRoute() {
   let currentHashRoute = location.hash.slice(1);
   // if (currentHashRoute.includes("videodetails")) {
@@ -335,7 +348,7 @@ function handleRoute() {
 }
 function renderCard(card) {
   const container = document.createElement("div");
-  container.classList.add("content-card", "mb-3");
+  container.classList.add("content-card", "mb-3", "col-sm-12", "col-lg-3");
 
   const cardImage = document.createElement("div");
   cardImage.classList.add("card-image");
@@ -400,6 +413,7 @@ window.addEventListener("load", () => {
   onLogin();
   renderExperiences();
   renderComments();
+  welcomeModalLogin();
 });
 
 window.addEventListener("hashchange", () => {

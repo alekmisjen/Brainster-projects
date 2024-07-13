@@ -69,7 +69,7 @@
 
     <section id="home">
       <div class="container-fluid hero-banner g-0">
-        <!-- <iframe
+        <iframe
           width="100%"
           height="100%"
           src="https://www.youtube.com/embed/arj7oStGLkU?si=l10YOPkh30RicPe4"
@@ -78,7 +78,7 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
-        ></iframe> -->
+        ></iframe>
       </div>
 
       <div class="cards">
@@ -87,10 +87,10 @@
             <h1 class="">Информирај се и заштити се</h1>
           </div>
           <div class="flex-grid">
-            <div class="custom-card">
+            <div class="custom-card col-sm-12 col-lg-4">
               <div class="card-content bg-purple py-3">
                 <div class="card-header p-3">
-                  <h4 class="ps-2">Научи сè што треба да знаеш</h4>
+                  <h4 class="ps-2 fs-1">Научи сè што треба да знаеш</h4>
                   <img src="./images/eye_lock.png" />
                 </div>
 
@@ -111,10 +111,10 @@
                 </div>
               </div>
             </div>
-            <div class="custom-card mx-auto">
+            <div class="custom-card mx-auto col-sm-12 col-lg-4">
               <div class="card-content bg-blue py-3">
                 <div class="card-header p-3">
-                  <h4 class="ps-2">Вклучи се во дискусија</h4>
+                  <h4 class="ps-2 fs-1">Вклучи се во дискусија</h4>
                   <img src="./images/encryption_check.png" />
                 </div>
 
@@ -135,10 +135,10 @@
                 </div>
               </div>
             </div>
-            <div class="custom-card mx-auto">
+            <div class="custom-card mx-auto col-sm-12 col-lg-4">
               <div class="card-content bg-green py-3">
                 <div class="card-header p-3">
-                  <h4 class="ps-2">Следи го својот напредок</h4>
+                  <h4 class="ps-2 fs-1">Следи го својот напредок</h4>
                   <img src="./images/user_access_control.png" />
                 </div>
 
@@ -171,13 +171,42 @@
           <h1 class="">Се што треба да знаеш</h1>
         </div>
         <!-- TODO link instead buttons with btn class -->
-        <div class="filters d-flex justify-content-between mx-auto">
+        <div class="filters d-flex justify-content-between mx-auto d-sm-none d-md-flex">
           <button class="btn active">Видеа</button>
           <button class="btn">Упатства</button>
           <button class="btn">Статии</button>
         </div>
+        <div id="carouselExample" class="carousel mx-auto d-none d-sm-block d-md-none" data-bs-touch="false" data-bs-interval="false">
+          <div class="carousel-indicators p-5">
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="false" aria-label="Slide 1"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></li>
+          </div>
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+              <button class="btn active">Видеа</button>
+            </div>
+            <div class="carousel-item">
+              <button class="btn">Упатства</button>
+            </div>
+            <div class="carousel-item">
+              <button class="btn">Статии</button>
+            </div>
+            <!-- Add more carousel items as needed -->
+          </div>
+          <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            
+          </a>
+          <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           
+          </a>
+          
+        </div>
+       
         <div
-          class="pills py-3 mx-auto d-flex flex-wrap justify-content-around"
+          class="pills py-3 mx-auto d-flex flex-wrap justify-content-around mt-5"
           id="pills"
         ></div>
         <div
@@ -194,14 +223,9 @@
           <div class="modal-body">
             <div class="row">
               <div class="col -6">
-                <h5 id="modal-title"></h5>
+                <h4 id="modal-title"></h4>
                 <p id="modal-desc"></p>
-                <!-- <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Totam beatae enim eum ipsam suscipit rerum provident iusto
-                  doloremque assumenda, nostrum, quo iste ratione ea iure nisi
-                  necessitatibus magnam accusamus magni.
-                </p> -->
+               
                 <form id="commentsForm" class="p-3 еxperiances-post card">
                   <textarea
                     id="commentContent"
@@ -224,7 +248,42 @@
 
                   <button type="submit" class="submitButton">Send</button>
                 </form>
-                <div id="commentsList"></div>
+                <div id="commentsList"> 
+                </div>
+                <div class="hardcodedComments">
+                  <div class="w-100 m-2">
+                    <div class="card mb-3 p-3">
+                      <!-- Content Paragraph -->
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, neque reprehenderit, earum maiores expedita facere ipsum non voluptatum nesciunt exercitationem quas rem, animi similique soluta. Sunt dignissimos aperiam labore laborum.</p>
+                  
+                      <!-- User Info Container -->
+                      <div class="mb-3 d-flex align-items-center justify-content-between">
+                        <div>
+                          <img src="images/user1.png" alt="User Image">
+                          <span class="ms-3">Komentari</span>
+                        </div>
+                        <span class="ms-5">25.06.24</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hardcodedComments">
+                  <div class="w-100 m-2">
+                    <div class="card mb-3 p-3">
+                      <!-- Content Paragraph -->
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, neque reprehenderit, earum maiores expedita facere ipsum non voluptatum nesciunt exercitationem quas rem, animi similique soluta. Sunt dignissimos aperiam labore laborum.</p>
+                  
+                      <!-- User Info Container -->
+                      <div class="mb-3 d-flex align-items-center justify-content-between">
+                        <div>
+                          <img src="images/user1.png" alt="User Image">
+                          <span class="ms-3">Komentari</span>
+                        </div>
+                        <span class="ms-5">25.06.24</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div class="col-6">
@@ -286,16 +345,16 @@
         <div class="title">
           <h1 class="">Профил</h1>
         </div>
-        <div class="row justify-content-around">
-          <div class="col-lg-3 profile-img mx-auto">
+        <div class="row justify-content-lg-between justify-content-sm-center">
+          <div class="col-lg-3 profile-img col-sm-12 mb-sm-5 text-center">
             <img src="images/profile_img.png" />
           </div>
-          <div class="col-lg-7 ms-5">
-            <form id="profile-form">
+          <div class="col-lg-7 ms-5 col-sm-12 text-white">
+            <form id="profile-form" >
               <div class="row">
-                <div class="col">
+                <div class="col-md-12">
                   <div class="form-group mb-4">
-                    <label for="profileUsername">Username</label>
+                    <label for="profileUsername" >Име и презиме / Корисничко име</label>
                     <div class="input-group mb-3">
                       <input
                         type="text"
@@ -304,8 +363,8 @@
                       />
                     </div>
                   </div>
-                  <div class="form-group mb-4">
-                    <label for="profile-email">Email address</label>
+                  <div class="form-group mb-4 ">
+                    <label for="profile-email" >Email адреса</label>
                     <div class="input-group mb-3">
                       <input
                         type="email"
@@ -320,13 +379,13 @@
                           id="update-email"
                           type="button"
                         >
-                          Add Email
+                          Додај Емаил
                         </button>
                       </div>
                     </div>
                   </div>
                   <div class="form-group mb-4">
-                    <label for="userPassword">Password</label>
+                    <label for="userPassword">Лозинка</label>
                     <div class="input-group mb-3">
                       <input
                         type="password"
@@ -338,7 +397,7 @@
                 </div>
                 <div class="col">
                   <div class="form-group mb-4">
-                    <label for="birth-year">Birth Year</label>
+                    <label for="birth-year">Година на раѓање</label>
                     <div class="input-group mb-3">
                       <input
                         type="text"
@@ -352,18 +411,18 @@
                           id="update-birth"
                           type="button"
                         >
-                          Button
+                          Измени
                         </button>
                       </div>
                     </div>
                   </div>
                   <div class="form-group mb-4">
-                    <label for="gender">Gender</label>
+                    <label for="gender">Пол</label>
                     <input
                       type="text"
                       class="form-control"
                       id="gender"
-                      placeholder=""
+                      placeholder="машки"
                     />
                   </div>
                 </div>
@@ -474,10 +533,11 @@
                 </div>
                 <a href="#" class="text-white">Ја заборави лозинката?</a>
               </div>
-              <button type="submit">Najavi se</button>
+              <button type="submit" class="custom-button w-50 mt-5">Namt0javi se</button>
             </form>
           </div>
-
+          
+         
           <div class="col">
             <div class="login-image w-75">
               <img src="./images/login.png" alt="" />
@@ -486,19 +546,29 @@
         </div>
       </div>
     </section>
-
-    <div class="container-fluid custom-footer mt-5">
-      <footer class="p-5 mx-auto">
-        <div class="row align-center justify-content-around">
-          <div class="col-lg-4 text-white px-5">
+    <div class="modal fade " id="welcomeModal" role="dialog">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content welcome-modal text-center">
+          <div class="modal-body p-5 text-white">
+            <h1 class="mb-3">Добредојде</h1>
+            <p class="mb-5 text-white">Успешно креиран профил</p>
+              <button id="redirectToProfile" class="custom-button">Продолжи кон Safeblink</button>  
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <footer class=" mx-auto container-fluid custom-footer mt-5">
+        <div class="row align-center justify-content-around p-5">
+          <div class="col-lg-5 text-white px-5">
             <a href="#"
               ><img src="./images/logo_white.png" width="114px" height="88px"
             /></a>
-            <p class="flex-column py-3">
+            <p class="flex-column py-3  text-white">
               International Foundation for Electoral Systems (IFES)
             </p>
             <div class="d-flex">
-              <p class="me-2">
+              <p class="me-2 text-white">
                 <img
                   src="images/mingcute_phone-line.png"
                   width="24px"
@@ -506,7 +576,7 @@
                   class="me-2"
                 /><span>+389-2-312-2288</span>
               </p>
-              <p class="mb-2 px-3">
+              <p class="mb-2 px-3 text-white">
                 <img
                   src="images/mail_icon.png"
                   width="24px"
@@ -566,12 +636,12 @@
                   class="me-2"
                 />
               </div>
-              <p>© All Rights Reserved | safeblink.mk</p>
+              <p class="text-white">© All Rights Reserved | safeblink.mk</p>
             </div>
           </div>
         </div>
       </footer>
-    </div>
+  
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
