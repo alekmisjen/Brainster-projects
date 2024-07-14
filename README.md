@@ -1,7 +1,5 @@
 # BrainsterProjects_AleksandraJensenFE18
 
-
-
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
@@ -42,51 +40,98 @@ Use the built-in continuous integration in GitLab.
 - [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
 - [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
-***
+---
 
-# Editing this README
+<div align="center">
+  <h1>Brainster Project 02 (Project Safe Web) - Aleksandra Mishevska Jensen FE18</h1>
+</div>
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+<!-- TABLE OF CONTENTS -->
+<details>  
+  <summary>Table of Contents</summary>
+  <ol>
+  <li><a href="#description">Description</a></li>
+    <li><a href="#build-with">Build with</a></li>
+    <li><a href="#login-functionality">Login Functionality</a></li>
+    <li><a href="#improvments">Improvments</a></li>   
+  </ol>
+</details>
+<h2 id="description">Technologies used in order to create this page.</h2>
+<p>Project Safe Web is second project that I worked on as studen at the Brainster Front-end Academy.<p>
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+<p>This UI project is about a web application that focuses on educating how to have a safe
+web experience. We were given a Figma project in order to familiarize ourself with the expected design and pages.</p>
 
-## Name
-Choose a self-explaining name for your project.
+ <p>All the content(images, icons, text, headlines, links) in dowloaded from Firna except for the youtube videos(used in home page and comments section).  
+ All the data that seems to be fetched from some backend, are hard-coded in the code itself.</p>
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+<h3>Pages</h3>
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+<b>Home-page(logo link) </b>:youtube video as hero banner and hardcoded cards in html.
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+<b>Informiraj se ("Сè што треба дазнаеш) -page</b>: The data for the cards come from cardsList.js file.
+When click on card modal opens with same date as the cards;
+New comments can be added and vissible when the comment is posted.
+Two comments from different logged in users are hardcoded in index.html
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+<b>Diskusii</b> Discussion board shows with Few Experiences from different logged in users which are hardcoded in experience.js
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Profile - Can be seen only for users. When user login profile link shows. Here user can add/edit email and only edit birth year.
+When user clicks on 6 video cards in informiraj se page and leaves one comment in card modal different Badges showes accordingly.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Log out - click on user image thumbnail in the top-right corner in the nav.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+<h4>Hardcoded content or added without any additional functionality</h4>
+<p> Google/Apple/TikTok authentication action as well as social icons in the footer  are
+not  linked to any specific action.
+The “Запомни ме” checkbox, zaboravi lozinka, magnifying glass icon, language change  not introduce any additional application behavior.
+Add(+), comments and reactions in expereince cards.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+</p>
+<h2 id="login-functionality">Login Functionality</h2>
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+In order to enable the login functionality, you need to set up a simple REST API locally
+written in Python with the Flask library.
+For this, you need to have Python installed locally(go to the “Files” section in the page and you will most probably need the “Windowsinstaller (64-bit)” if you are running locally on Windows). The version which was used for
+developing the application 3.12.3. After installing Python, REST API is included in this folder and run it by using the following CLI command in the directory where the
+REST API directory is located:
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+python '.\REST API\authenticator.py'
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+When you execute this command, if you get the following error:
+“No module named ‘flask_cors’”, then you should install the flask library
+and/or the flask_cors by running the following CLI commands:
 
-## License
-For open source projects, say how it is licensed.
+pip install flask
+pip install flask_cors
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+and then retry the python command from above.
+
+For confirming that the authenticator REST API is
+up-and-running, you should see the following output in the terminal:
+
+- Serving Flask app 'authenticator'
+- Debug mode: on
+  WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+- Running on http://127.0.0.1:5000
+  Press CTRL+C to quit
+- Restarting with stat
+- Debugger is active!
+- Debugger PIN: 138-088-340
+
+<h2 id="improvments">Thing that shoud be done.</h2>
+There are few things that are not done in order for the project to be fully complited in interest of time
+
+-Responsive footer
+-Input field style in profile page
+-User image thumbnail white background.
+-More intuitive aproach for Logout button.
+-videos in all card modals.
+-videos instead of images in inform page.
+
+<h2 id="build-with">Technologies used in order to create this page.</h2>
+
+- ![HTML](https://img.shields.io/badge/-HTML5-e34c26?logo=html5&logoColor=white)
+- ![CSS](https://img.shields.io/badge/-CSS3-264de4?logo=css3&logoColor=white)
+- ![Bootstrap](https://img.shields.io/badge/-Bootstrap-533B78?logo=bootstrap&logoColor=white)
+- ![Javascript](https://img.shields.io/badge/-Javascript-EFD81D?logo=javascript&logoColor=white)
