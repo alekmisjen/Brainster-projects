@@ -1,0 +1,32 @@
+.header__top {
+  background: white;
+}
+
+.header__top__left {
+  padding: 10px 0 13px;
+}
+.header__top__right a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+/* .nav-item {
+  margin: 0 8px;
+  position: relative;
+} */
+
+.nav-link {
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  /* border-bottom: 2px solid transparent; */
+}
+.nav-link:hover {
+  color: #ff6f0f !important;
+}
+
+.nav-link-active {
+  color: #ff6f0f !important;
+  font-weight: bold;
+  /* border-bottom: 2px solid #ff6f0f !important; */
+}

@@ -1,0 +1,40 @@
+/* Hero.css */
+
+.hero-section {
+  padding-top: 180px;
+
+  min-height: 70vh;
+  background-size: cover; /* Ensure the background image covers the area
+  background-position: center; /* Center the background image */
+}
+
+.hero-content {
+  /* Optional: add some background shading or overlay to make the text stand out */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 4rem 2rem;
+}
+
+.hero-pre-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #ffce00;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
