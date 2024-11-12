@@ -1,0 +1,30 @@
+.button {
+  background-color: #ff6f0f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 10px 0;
+}
+.button-small {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.button-medium {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.button-large {
+  padding: 15px 30px;
+  font-size: 18px;
+}
