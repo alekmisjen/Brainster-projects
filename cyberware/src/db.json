@@ -42,5 +42,13 @@
       "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
       "icon": "./icons/service-icon-6.png"
     }
-  ]
+  ],
+  "section_one": {
+    "title": "Who We Are",
+    "content": "At Cyberware Global Defense (CGD), we are committed to protecting the digital future through innovative solutions that safeguard businesses from evolving cyber threats. Our expert team combines cutting-edge technology with a proactive approach to cybersecurity, ensuring that your organization remains secure, compliant, and resilient in the face of emerging challenges."
+  },
+  "section_two": {
+    "title": "Always On Guard: Your 24/7 Online Security Solution for Unmatched Protection",
+    "image": "./images/section-two.png"
+  }
 }

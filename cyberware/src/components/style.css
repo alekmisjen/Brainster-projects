@@ -21,3 +21,42 @@ button:focus-visible {
 .color-primary {
   color: #ff6f0f;
 }
+.custom-border-bottom {
+  border-bottom: 4px solid #ff6f0f;
+}
+.section-one {
+  color: white;
+}
+.rec {
+  border: 2px solid #ff6f0f;
+}
+
+.logo-slider {
+  overflow: hidden;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-slide-track {
+  display: flex;
+  align-items: center;
+  width: max-content; /* Makes sure the track width adapts to the total width of all logos */
+  transition: transform 1s ease-in-out;
+}
+
+.logo {
+  height: 100%;
+  margin: 0 30px; /* Adjust margin for spacing between logos */
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .logo-slider {
+    height: 60px;
+  }
+
+  .logo {
+    height: 60%; /* Adjust logo size for smaller screens */
+  }
+}

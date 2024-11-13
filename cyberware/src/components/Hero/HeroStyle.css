@@ -4,8 +4,8 @@
   padding-top: 180px;
 
   min-height: 70vh;
-  background-size: cover; /* Ensure the background image covers the area
-  background-position: center; /* Center the background image */
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-content {

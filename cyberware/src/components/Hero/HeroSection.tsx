@@ -17,7 +17,7 @@ export const HeroSection = ({ heroData }: HeroProps) => {
 
   return (
     <section
-      className=" hero-section"
+      className=" hero-section custom-border-bottom "
       style={{ backgroundImage: `url(${heroData.bgImg})` }}
     >
       <div className="container">

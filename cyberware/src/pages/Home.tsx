@@ -1,13 +1,15 @@
 import { HeroSection } from "../components/Hero/HeroSection";
 import { ServiceCard } from "../components/Services/ServiceCard";
+import SectionOne from "../components/SectionOne/SectionOne";
 import data from "../db.json";
-import "style.css";
+import SectionTwo from "../components/SectionTwo";
+import { Slider } from "../components/Slider";
 
 export const Home = () => {
   return (
     <>
       <HeroSection heroData={data.heroSection} />
-      <div className="custom-bg-dark  container-fluid py-5">
+      <div className="custom-bg-dark custom-border-bottom  container-fluid py-5">
         <div className="row g-3 justify-content-center">
           <h1 className="text-center color-primary">Services</h1>
           {data.services.map((service) => (
@@ -17,6 +19,9 @@ export const Home = () => {
           ))}
         </div>
       </div>
+      <SectionOne sectionOne={data.section_one} />
+      <SectionTwo sectionTwo={data.section_two} />
+      <Slider />
     </>
   );
 };
