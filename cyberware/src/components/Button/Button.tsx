@@ -1,9 +1,9 @@
 import "./Button.css";
 interface ButtonProps {
   label: React.ReactNode;
-  handleOnClick: () => void;
+  handleOnClick?: () => void;
   icon?: React.ReactNode;
-  size?: "small" | "medium" | "large";
+  size?: "small" | "medium" | "large" | "round";
   transparent?: boolean;
   color?: string;
 }

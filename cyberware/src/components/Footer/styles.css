@@ -1,0 +1,38 @@
+.footer {
+  background-color: #222; /* Dark background */
+  color: #fff;
+}
+.footer a {
+  color: white; /* Accent color for links */
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 0.3rem;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .footer-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px; /* Ensure equal height */
+}
+.footer-logo {
+  border-right: 1px solid white;
+}
+
+.footer .input {
+  border-bottom: 1px solid white;
+}
+.form-control {
+  background-color: #303030 !important;
+  border-radius: 0 !important;
+  border: none;
+}
+.form-control:focus {
+  border-color: #ffbc3b;
+  box-shadow: none;
+}
+.input::placeholder {
+  color: white;
+}

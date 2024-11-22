@@ -1,12 +1,15 @@
 import { NavLink } from "react-router-dom";
 import { TopHeader } from "./TopHeader";
 
+import { useTranslation } from "react-i18next";
+
 // Handler for language selection
 
 // const customHandleOnClick = () => {
 //   console.log("Button was clicked");
 // };
 const Header: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <header className="fixed-top header nav-bg">
       <TopHeader />
@@ -24,7 +27,7 @@ const Header: React.FC = () => {
                       : "nav-link px-2  text-white"
                   }
                 >
-                  Home
+                  {t("Home")}
                 </NavLink>
               </li>
               <li className="nav-item">

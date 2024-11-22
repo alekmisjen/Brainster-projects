@@ -3,4 +3,5 @@ export const languages = [
   { label: "Spanish", value: "es" },
   { label: "French", value: "fr" },
   { label: "German", value: "de" },
+  { label: "Macedonian", value: "mk" },
 ];

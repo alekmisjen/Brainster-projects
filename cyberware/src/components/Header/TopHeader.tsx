@@ -3,15 +3,21 @@ import "./Header.css";
 import { GlobeIcon } from "../../assets/icons/GlobeIcon";
 import { useState } from "react";
 import { DropdownButton } from "../DropdownButton/DropdownButton";
+import { useTranslation } from "react-i18next";
+import { languages } from "../../types/languages";
 
 export const TopHeader = () => {
-  const [language, setLanguage] = useState<string>("en");
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState<string>(i18n.language || "en");
 
   const handleLanguageChange = (newLanguage: string) => {
+    i18n.changeLanguage(newLanguage);
     setLanguage(newLanguage);
   };
+  const currentLabel =
+    languages.find((lang) => lang.value === language)?.label || "Language";
   return (
-    <div className="header__top py-2 bg-white">
+    <div className="header__top bg-white">
       <div className="container">
         <div className="row no-gutters">
           <div className="col-lg-4 col-md-4 text-lg-left">
@@ -25,16 +31,17 @@ export const TopHeader = () => {
             <div className="header__top__right">
               <div className=" d-flex  align-items-center justify-content-end">
                 <Link to="#" className="me-5">
-                  Emergency Response Plan
+                  {t("Emergency Response Plan")}
                 </Link>
                 <Link to="#" className="me-2">
-                  Support<i className="fas fa-chevron-down ms-2"></i>
+                  {t("Support")}
+                  <i className="fas fa-chevron-down ms-2"></i>
                 </Link>
 
                 <DropdownButton
-                  label={language}
+                  label={currentLabel}
                   icon={<GlobeIcon />}
-                  onLanguageChange={handleLanguageChange}
+                  changeLanguage={handleLanguageChange}
                   currentLanguage={language}
                 />
               </div>

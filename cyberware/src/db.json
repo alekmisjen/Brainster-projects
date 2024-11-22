@@ -1,10 +1,285 @@
 {
-  "heroSection": {
+  "clientTestimonial": [
+    {
+      "icon": "./icons/client-icon.png",
+      "body": [
+        {
+          "subTitle": "Company",
+          "content": " A small rural hospital"
+        },
+        {
+          "subTitle": "Challenge",
+          "content": " Difficulty in managing patient records and scheduling appointments due to outdated systems"
+        },
+        {
+          "subTitle": "Solution",
+          "content": " Implemented an Electronic Health Record (EHR) system integrated with telemedicine capabilities"
+        },
+        {
+          "subTitle": "Outcome",
+          "content": "  Improved patient care, reduced medical errors, increased patient satisfaction, and expanded access to healthcare services in remote areas"
+        }
+      ]
+    },
+    {
+      "icon": "./icons/client-icon.png",
+      "body": [
+        {
+          "subTitle": "Company",
+          "content": " A small rural hospital"
+        },
+        {
+          "subTitle": "Challenge",
+          "content": " Difficulty in managing patient records and scheduling appointments due to outdated systems"
+        },
+        {
+          "subTitle": "Solution",
+          "content": " Implemented an Electronic Health Record (EHR) system integrated with telemedicine capabilities"
+        },
+        {
+          "subTitle": "Outcome",
+          "content": "  Improved patient care, reduced medical errors, increased patient satisfaction, and expanded access to healthcare services in remote areas"
+        }
+      ]
+    },
+    {
+      "icon": "./icons/client-icon.png",
+      "body": [
+        {
+          "subTitle": "Company",
+          "content": " A tech startup"
+        },
+        {
+          "subTitle": "Challenge",
+          "content": "Scaling the infrastructure to handle increasing user demand"
+        },
+        {
+          "subTitle": "Solution",
+          "content": "Migrated to a cloud-based solution to ensure scalability and flexibility"
+        },
+        {
+          "subTitle": "Outcome",
+          "content": "Enabled faster growth, better user experience, and improved system reliability"
+        }
+      ]
+    },
+    {
+      "icon": "./icons/client-icon.png",
+      "body": [
+        {
+          "subTitle": "Company",
+          "content": " A tech startup"
+        },
+        {
+          "subTitle": "Challenge",
+          "content": "Scaling the infrastructure to handle increasing user demand"
+        },
+        {
+          "subTitle": "Solution",
+          "content": "Migrated to a cloud-based solution to ensure scalability and flexibility"
+        },
+        {
+          "subTitle": "Outcome",
+          "content": "Enabled faster growth, better user experience, and improved system reliability"
+        }
+      ]
+    }
+  ],
+
+  "certificate": [
+    {
+      "title": "Quality Management (DIN EN ISO 9001)",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/certificate-icon.png"
+    },
+    {
+      "title": "Quality Management (DIN EN ISO 9001)",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/certificate-icon.png"
+    },
+    {
+      "title": "Quality Management (DIN EN ISO 9001)",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/certificate-icon.png"
+    },
+    {
+      "title": "Quality Management (DIN EN ISO 9001)",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/certificate-icon.png"
+    },
+    {
+      "title": "Quality Management (DIN EN ISO 9001)",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/certificate-icon.png"
+    },
+    {
+      "title": "Quality Management (DIN EN ISO 9001)",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/certificate-icon.png"
+    }
+  ],
+  "locationSection": {
+    "bgImg": "./images/location.png",
+    "title": "Our Locations",
+    "locations": [
+      {
+        "country": "Germany",
+        "city": " Koln",
+        "address": "Hohenzollernring No. 72",
+        "postalCode": "50672",
+        "icon": "./icons/city-icon.png"
+      },
+      {
+        "country": "North Macedonia",
+        "city": " Skopje",
+        "address": "11th October No. 25",
+        "postalCode": "1000",
+        "icon": "./icons/city-icon.png"
+      },
+      {
+        "country": "Albania",
+        "city": "Tirana",
+        "address": "Ruga Myslym Shyri No. 37",
+        "postalCode": "1001",
+        "icon": "./icons/city-icon.png"
+      },
+      {
+        "country": "Turkey",
+        "city": " Istanbul",
+        "address": "Istiklal Caddesi No. 45",
+        "postalCode": "34430",
+        "icon": "./icons/city-icon.png"
+      }
+    ]
+  },
+
+  "aboutCard": [
+    {
+      "id": "479912135-db21-43d2-8797-fd374c452153",
+      "title": "Our Mission Statement",
+      "description": "At Cyberware Global Defense (CGD), our mission is to safeguard businesses by delivering cutting-edge cybersecurity solutions. By combining advanced AI technologies with industry-leading expertise, we ensure that our clients are protected from the evolving landscape of cyber threats. Our goal is to keep your business secure and resilient.",
+      "icon": "./icons/mission-icon.png"
+    },
+    {
+      "id": "579912135-db21-4362-8397-fd374c452153",
+      "title": "Our Story",
+      "description": "At Cyberware Global Defense (CGD), our mission is to safeguard businesses by delivering cutting-edge cybersecurity solutions. By combining advanced AI technologies with industry-leading expertise, we ensure that our clients are protected from the evolving landscape of cyber threats. Our goal is to keep your business secure and resilient.",
+      "icon": "./icons/value-icon.png"
+    },
+    {
+      "id": "279912135-db21-43d2-8397-fd334c452153",
+      "title": "Online Order",
+      "description": "At Cyberware Global Defense (CGD), our mission is to safeguard businesses by delivering cutting-edge cybersecurity solutions. By combining advanced AI technologies with industry-leading expertise, we ensure that our clients are protected from the evolving landscape of cyber threats. Our goal is to keep your business secure and resilient.",
+      "icon": "./icons/story-icon.png"
+    },
+    {
+      "id": "179912135-db21-43d2-8397-fd374c452353",
+      "title": "24/7 Service",
+      "description": "At Cyberware Global Defense (CGD), our mission is to safeguard businesses by delivering cutting-edge cybersecurity solutions. By combining advanced AI technologies with industry-leading expertise, we ensure that our clients are protected from the evolving landscape of cyber threats. Our goal is to keep your business secure and resilient.",
+      "icon": "./icons/experties-icon.png"
+    }
+  ],
+  "team": [
+    {
+      "first_name": "Ximenez",
+      "last_name": "Sangwin",
+      "avatar": "/images/team/team-1.png",
+      "position": "Founders",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Tallulah",
+      "last_name": "Mullen",
+      "avatar": "/images/team/team-2.png",
+      "position": "Founders",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Niko",
+      "last_name": "Vasyaev",
+      "avatar": "/images/team/team-3.png",
+      "position": "Founders",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Howie",
+      "last_name": "Rupel",
+      "avatar": "/images/team/team-4.png",
+      "position": "Security Awareness Advisors",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Howie",
+      "last_name": "Rupel",
+      "avatar": "/images/team/team-4.png",
+      "position": "Security Awareness Advisors",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Howie",
+      "last_name": "Rupel",
+      "avatar": "/images/team/team-4.png",
+      "position": "Security Awareness Advisors",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Edouard",
+      "last_name": "Gronav",
+      "avatar": "/images/team/team-5.png",
+      "position": "Cybersecurity Specialists",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Gwennie",
+      "last_name": "Toomer",
+      "avatar": "/images/team/team-6.png",
+      "position": "Security Awareness Advisors",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Gloria",
+      "last_name": "Bon",
+      "avatar": "/images/team/team-7.png",
+      "position": "Cybersecurity Specialists",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Lonnie",
+      "last_name": "O'Carran",
+      "avatar": "/images/team/team-8.png",
+      "position": "Security Awareness Advisors",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Ollie",
+      "last_name": "Abelovitz",
+      "avatar": "/images/team/team-9.png",
+      "position": "Security Awareness Advisors",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    }
+  ],
+  "heroHome": {
     "preTitle": "Your Cybersecurity Experts Securing the Future Today",
     "title": "Tailored, AI-driven solutions to protect your business",
     "desc": "Protecting the digital future through innovative cybersecurity solutions, we empower businesses to safeguard their assets, ensure compliance, and maintain trust in an increasingly connected world",
     "bgImg": "./images/home-hero-img.png"
   },
+  "heroAbout": {
+    "title": "Protecting the digital future through innovative cybersecurity solutions",
+    "bgImg": "./images/about-hero.png"
+  },
+
   "services": [
     {
       "id": "479912135-db21-43d2-8797-fd374c452153",
@@ -50,5 +325,64 @@
   "section_two": {
     "title": "Always On Guard: Your 24/7 Online Security Solution for Unmatched Protection",
     "image": "./images/section-two.png"
-  }
+  },
+  "contacts": [
+    {
+      "name": "Aleksandra",
+      "email": "alek@example.com",
+      "message": "Hello there",
+      "newsletter": true,
+      "id": 1
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "017531c6-5218-4a8b-875c-5d9bd8a02400",
+      "first_name": "Gayle",
+      "last_name": "Bickerstaff",
+      "message": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+      "avatar": "./images/customers/test-1.png",
+      "rating": 4
+    },
+    {
+      "id": "6ef6327f-f3c7-41b0-aeef-f3666c6243c2",
+      "first_name": "Davina",
+      "last_name": "Whyborne",
+      "message": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
+      "avatar": "./images/customers/test-2.png",
+      "rating": 2
+    },
+    {
+      "id": "70e0c23c-0a9a-4239-a3f1-798492aa8abb",
+      "first_name": "Alane",
+      "last_name": "Double",
+      "message": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+      "avatar": "./images/customers/test-3.png",
+      "rating": 5
+    },
+    {
+      "id": "4e56d46d-3e40-48a1-861f-8c5b77e472d0",
+      "first_name": "Madlin",
+      "last_name": "Cowle",
+      "message": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+      "avatar": "./images/customers/test-1.png",
+      "rating": 3
+    },
+    {
+      "id": "db029548-3176-4b8a-bf15-e2346c2f0973",
+      "first_name": "Kissiah",
+      "last_name": "Plampeyn",
+      "message": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+      "avatar": "./images/customers/test-3.png",
+      "rating": 4
+    },
+    {
+      "id": "f8957061-4022-4f9e-8870-eadc4e341258",
+      "first_name": "Zebedee",
+      "last_name": "Walster",
+      "message": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+      "avatar": "./images/customers/test-2.png",
+      "rating": 5
+    }
+  ]
 }

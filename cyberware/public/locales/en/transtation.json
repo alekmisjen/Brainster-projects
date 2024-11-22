@@ -1,0 +1,90 @@
+{
+  "team": [
+    {
+      "first_name": "Ximenez",
+      "last_name": "Sangwin",
+      "avatar": "/images/team/team-1.png",
+      "position": "Founders",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Tallulah",
+      "last_name": "Mullen",
+      "avatar": "/images/team/team-2.png",
+      "position": "Founders",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    },
+    {
+      "first_name": "Niko",
+      "last_name": "Vasyaev",
+      "avatar": "/images/team/team-3.png",
+      "position": "Founders",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.",
+      "bio": "Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id.Lorem ipsum dolor sit amet consectetur. Arcu nullam habitasse tortor id."
+    }    
+  ],
+  "heroHome": {
+    "preTitle": "Your Cybersecurity Experts Securing the Future Today",
+    "title": "Tailored, AI-driven solutions to protect your business",
+    "desc": "Protecting the digital future through innovative cybersecurity solutions, we empower businesses to safeguard their assets, ensure compliance, and maintain trust in an increasingly connected world",
+    "bgImg": "./images/home-hero-img.png"
+  },
+
+  "services": [
+    {
+      "id": "479912135-db21-43d2-8797-fd374c452153",
+      "title": "Master Chefs",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/service-icon-1.png"
+    },
+    {
+      "id": "579912135-db21-4362-8397-fd374c452153",
+      "title": "Quality Food",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/service-icon-2.png"
+    },
+    {
+      "id": "279912135-db21-43d2-8397-fd334c452153",
+      "title": "Online Order",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/service-icon-3.png"
+    },
+    {
+      "id": "179912135-db21-43d2-8397-fd374c452353",
+      "title": "24/7 Service",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/service-icon-4.png"
+    },
+    {
+      "id": "179912135-db21-43d2-8397-fd384c452153",
+      "title": "24/7 Service",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/service-icon-5.png"
+    },
+    {
+      "id": "179912135-db21-43d2-8397-fda374c452153",
+      "title": "24/7 Service",
+      "description": "Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam",
+      "icon": "./icons/service-icon-6.png"
+    }
+  ],
+  "section_one": {
+    "title": "Who We Are",
+    "content": "At Cyberware Global Defense (CGD), we are committed to protecting the digital future through innovative solutions that safeguard businesses from evolving cyber threats. Our expert team combines cutting-edge technology with a proactive approach to cybersecurity, ensuring that your organization remains secure, compliant, and resilient in the face of emerging challenges."
+  },
+  "section_two": {
+    "title": "Always On Guard: Your 24/7 Online Security Solution for Unmatched Protection",
+    "image": "./images/section-two.png"
+  },
+  "contacts": [
+    {
+      "name": "Aleksandra",
+      "email": "alek@example.com",
+      "message": "Hello there",
+      "newsletter": true,
+      "id": 1
+    }
+  ]
+}

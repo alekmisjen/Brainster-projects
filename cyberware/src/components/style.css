@@ -18,8 +18,12 @@ button:focus-visible {
 .custom-bg-dark {
   background-color: #323232;
 }
+
 .color-primary {
   color: #ff6f0f;
+}
+.custom-border-bottom {
+  border-bottom: 4px solid #ff6f0f;
 }
 .custom-border-bottom {
   border-bottom: 4px solid #ff6f0f;
@@ -59,4 +63,7 @@ button:focus-visible {
   .logo {
     height: 60%; /* Adjust logo size for smaller screens */
   }
+}
+.location-card {
+  border-bottom: 1px solid #ff6f0f;
 }
