@@ -1,4 +1,290 @@
 {
+  "contactPage": {
+    "hero": [
+      {
+        "title": "Your Cybersecurity Experts – Securing the Future Today"
+      }
+    ],
+    "title": "Contact us",
+    "blockSection": "We are here to help you secure you future ",
+    "subTitle": "What happens next?",
+    "address": "Street, Berlin Germany ",
+    "email": "info@cyberg.com",
+    "phone": "+49 123 456 789"
+  },
+
+  "industries": {
+    "hero": [
+      {
+        "bgImg": "../images/industries-bg.png",
+        "title": "Industries We Protect:",
+        "subTitle": "We continuously enhance our services to adapt to the ever-changing cyber landscape. Our commitment is to provide top-tier solutions to protect your data and operations, regardless of your industry."
+      }
+    ],
+    "card": [
+      {
+        "title": "Healthcare",
+        "icon": "../icons/healthcare-icon.png",
+        "desc": "Cyber services in the health sector are crucial for protecting sensitive patient data and ensuring the integrity of healthcare systems. The healthcare industry faces significant cybersecurity challenges, including outdated software, inadequate network protections, and a lack of employee training, making it a prime target for cybercriminals. Common threats include ransomware attacks, phishing schemes, and vulnerabilities in Internet of Medical Things (IoMT) devices. Effective cybersecurity measures must include robust data protection protocols, regular security audits, and comprehensive employee training to foster awareness. Additionally, implementing advanced technologies like threat intelligence can help healthcare organizations anticipate and mitigate risks. As the sector continues to evolve, prioritizing cybersecurity is essential to safeguard patient safety and maintain trust in healthcare services. "
+      },
+      {
+        "title": "eGame",
+        "icon": "../icons/egame-icon.png",
+        "desc": "Cyber services in the health sector are crucial for protecting sensitive patient data and ensuring the integrity of healthcare systems. The healthcare industry faces significant cybersecurity challenges, including outdated software, inadequate network protections, and a lack of employee training, making it a prime target for cybercriminals. Common threats include ransomware attacks, phishing schemes, and vulnerabilities in Internet of Medical Things (IoMT) devices. Effective cybersecurity measures must include robust data protection protocols, regular security audits, and comprehensive employee training to foster awareness. Additionally, implementing advanced technologies like threat intelligence can help healthcare organizations anticipate and mitigate risks. As the sector continues to evolve, prioritizing cybersecurity is essential to safeguard patient safety and maintain trust in healthcare services."
+      },
+      {
+        "title": "Education",
+        "icon": "../icons/education-icon.png",
+        "desc": "Cyber services in the health sector are crucial for protecting sensitive patient data and ensuring the integrity of healthcare systems. The healthcare industry faces significant cybersecurity challenges, including outdated software, inadequate network protections, and a lack of employee training, making it a prime target for cybercriminals. Common threats include ransomware attacks, phishing schemes, and vulnerabilities in Internet of Medical Things (IoMT) devices. Effective cybersecurity measures must include robust data protection protocols, regular security audits, and comprehensive employee training to foster awareness. Additionally, implementing advanced technologies like threat intelligence can help healthcare organizations anticipate and mitigate risks. As the sector continues to evolve, prioritizing cybersecurity is essential to safeguard patient safety and maintain trust in healthcare services."
+      },
+      {
+        "title": "Retail",
+        "icon": "../icons/retail-icon.png",
+        "desc": "Gathering information about the target system, which may include identifying network services and potential entry points "
+      },
+      {
+        "title": "Finance",
+        "icon": "../icons/finance-icon.png",
+        "desc": "Gathering information about the target system, which may include identifying network services and potential entry points "
+      },
+      {
+        "title": "Government",
+        "icon": "../icons/government-icon.png",
+        "desc": "Gathering information about the target system, which may include identifying network services and potential entry points "
+      }
+    ],
+    "title": "Not sure if we cover your industry?",
+    "blockSection": "Cyber threats are constantly evolving, and every industry faces unique challenges. If you don't see your sector listed or want to learn more about how we can tailor our solutions to your specific needs, we're here to help. Contact us today, and let's discuss how we can protect your business"
+  },
+  "PTestingServicePage": {
+    "hero": [
+      {
+        "bgImg": "../images/siem-hero.png",
+        "title": "Penetration Testing:",
+        "subTitle": "Identify and eliminate vulnerabilities in your network with our comprehensive penetration testing services."
+      }
+    ],
+    "title": "Key Features of Penetration Testing",
+    "icon": "../icons/service-icon-2.png",
+    "card": [
+      {
+        "title": "Reconnaissance",
+        "desc": "Gathering information about the target system, which may include identifying network services and potential entry points "
+      },
+      {
+        "title": "Scanning",
+        "desc": "Using tools to discover live hosts, open ports, and services running on those ports. This phase helps in mapping the attack surface "
+      },
+      {
+        "title": "Gaining Access",
+        "desc": "Exploiting identified vulnerabilities using various tools and techniques to gain unauthorized access to the system. "
+      },
+      {
+        "title": "Maintaining Access",
+        "desc": "Establishing a persistent presence within the target environment to gather further data and assess the extent of control that can be achieved  "
+      }
+    ],
+    "body": [
+      {
+        "title": "Overview of Penetration Testing",
+        "desc": "Penetration testing, often referred to as 'pentesting,' is an authorized simulated cyberattack on a computer system, designed to evaluate its security. Unlike vulnerability assessments, which merely identify potential weaknesses, penetration tests actively exploit vulnerabilities to demonstrate their impact and assess the overall security posture of the system."
+      },
+      {
+        "title": "Purpose and Importance",
+        "desc": "The primary goal of penetration testing is to identify and address security vulnerabilities before they can be exploited by malicious actors. By simulating real-world attacks, organizations can understand their weaknesses and implement necessary defenses. Regular penetration testing is crucial for maintaining robust cybersecurity measures, especially in light of increasing cyber threats."
+      },
+      {
+        "title": "Best Practices for Effective SIEM Implementation",
+        "desc": "Different types of penetration tests focus on various aspects of an organization's security:",
+        "content": [
+          {
+            "subTitle": "1. Web Application Testing:",
+            "text": "Evaluates web applications for vulnerabilities such as SQL injection and cross-site scripting (XSS)."
+          },
+          {
+            "subTitle": "2. Internal Network Testing:",
+            "text": "Assesses vulnerabilities from within the network, simulating an insider threat."
+          },
+          {
+            "subTitle": "3. External Network Testin:",
+            "text": " Identifies vulnerabilities that could be exploited from outside the organization."
+          },
+          {
+            "subTitle": "4. Social Engineering Testing:",
+            "text": " Tests employees' susceptibility to phishing and other social engineering tactics."
+          },
+          {
+            "subTitle": "5. Wireless Network Testing:",
+            "text": " Examines the security of wireless networks against unauthorized access."
+          }
+        ]
+      },
+      {
+        "title": "Conclusion",
+        "desc": "Penetration testing is an essential component of a comprehensive cybersecurity strategy. By simulating attacks and identifying vulnerabilities, organizations can take proactive measures to strengthen their defenses against real-world threats. Regularly scheduled penetration tests not only enhance security but also ensure compliance with industry regulations, ultimately protecting sensitive data and maintaining trust with stakeholders."
+      }
+    ]
+  },
+  "siemServicePage": {
+    "hero": [
+      {
+        "bgImg": "../images/siem-hero.png",
+        "title": "SIEM Threat Detection & Response:",
+        "subTitle": "Our 24/7 monitoring services use AI-powered tools to detect and neutralize threats before they can harm your business."
+      }
+    ],
+    "title": "Key Features of SIEM",
+    "icon": "../icons/service-icon-1.png",
+    "card": [
+      {
+        "title": "Data Aggregation",
+        "desc": "SIEM solutions collect event data from diverse sources, including user activities, endpoints, applications, and security hardware like firewalls and antivirus software. "
+      },
+      {
+        "title": "Event Correlation",
+        "desc": "By correlating related events, SIEM systems can identify patterns that may indicate potential threats. "
+      },
+      {
+        "title": "Real-Time Monitoring",
+        "desc": "SIEM tools provide near-real-time analysis of security alerts, enabling security teams to respond swiftly to incidents."
+      },
+      {
+        "title": "Automated Response",
+        "desc": "Many SIEM solutions incorporate automation features that can respond to certain types of threats automatically. "
+      }
+    ],
+    "body": [
+      {
+        "title": "Overview of SIEM in Threat Detection and Response",
+        "desc": "Security Information and Event Management (SIEM) systems play a crucial role in modern cybersecurity strategies by aggregating and analyzing log data from various sources within an organization's IT infrastructure. These systems are designed to detect, investigate, and respond to security threats in real-time, enhancing overall security posture."
+      },
+      {
+        "title": "Threat Detection and Response (TDR)",
+        "desc": "Threat Detection and Response encompasses a broader strategy that includes not only SIEM but also other technologies such as Endpoint Detection and Response (EDR) and Threat Intelligence Platforms (TIPs). The TDR process typically involves:",
+        "content": [
+          {
+            "subTitle": "Proactive Threat Hunting:",
+            "text": "Actively searching for potential threats before they can cause damage, which requires a deep understanding of normal network behavior"
+          },
+          {
+            "subTitle": "Incident Response:",
+            "text": "Implementing structured steps to address detected threats, including identification, containment, eradication, recovery, and post-incident analysis"
+          }
+        ]
+      },
+      {
+        "title": "Best Practices for Effective SIEM Implementation",
+        "content": [
+          {
+            "subTitle": "Continuous Monitoring:",
+            "text": "Organizations should implement ongoing monitoring of their networks and systems to detect threats early"
+          },
+          {
+            "subTitle": "Regular Updates:",
+            "text": "Keeping threat intelligence updated enhances detection capabilities against evolving cyber threats"
+          },
+          {
+            "subTitle": "Multi-Layered Security Approach:",
+            "text": "Combining SIEM with other security measures such as EDR and TIPs creates a more robust defense against cyber attacks"
+          },
+          {
+            "subTitle": "Incident Response Planning:",
+            "text": " Developing a detailed incident response plan ensures that organizations can react efficiently to security incidents when they occur"
+          }
+        ]
+      },
+      {
+        "title": "Conclusion",
+        "desc": "SIEM solutions are integral to effective threat detection and response strategies in cybersecurity. By leveraging advanced analytics, real-time monitoring, and automation capabilities, organizations can significantly improve their ability to detect and respond to cyber threats swiftly and efficiently. Implementing best practices in conjunction with SIEM technologies further strengthens an organization's overall security framework against increasingly sophisticated cyber threats"
+      }
+    ]
+  },
+  "job": [
+    {
+      "date": "22 May 2024",
+      "title": "Cybersecurity Analyst",
+      "desc": "Join our team as a Cybersecurity Analyst, where you will monitor and analyze security systems to identify vulnerabilities and respond to incidents, ensuring our organization's data remains secure.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "1000"
+    },
+    {
+      "date": "10 Mart, 2024",
+      "title": "Incident Response Specialist",
+      "desc": "Join us as an Incident Response Specialist, where you will manage and respond to security incidents, conducting investigations and implementing strategies to mitigate future threats.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "1500"
+    },
+    {
+      "date": "03 August, 2024",
+      "title": "Threat Intelligence Analyst",
+      "desc": "We are looking for a Threat Intelligence Analyst to gather and analyze threat data, helping us stay ahead of emerging cyber threats and strengthen our defense strategies.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "2000"
+    },
+    {
+      "date": "10 Juni, 2024",
+      "title": "Information Security Officer",
+      "desc": "Join our team as a Cybersecurity Analyst, where you will monitor and analyze security systems to identify vulnerabilities and respond to incidents, ensuring our organization's data remains secure.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "1000"
+    },
+    {
+      "date": "22 April, 2024",
+      "title": "Penetration Tester",
+      "desc": "Join our team as, where you will monitor and analyze security systems to identify vulnerabilities and respond to incidents, ensuring our organization's data remains secure.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "5000"
+    },
+    {
+      "date": "22 Juni, 2024",
+      "title": "Cybersecurity Analyst",
+      "desc": "Join our team as a Cybersecurity Analyst, where you will monitor and analyze security systems to identify vulnerabilities and respond to incidents, ensuring our organization's data remains secure.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "2300"
+    },
+    {
+      "date": "13 January, 2024",
+      "title": "Cybersecurity Analyst",
+      "desc": "Join our team as a Cybersecurity Analyst, where you will monitor and analyze security systems to identify vulnerabilities and respond to incidents, ensuring our organization's data remains secure.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "1000"
+    },
+    {
+      "date": "30 July, 2024",
+      "title": "Security Engineer",
+      "desc": "Join our team as a Cybersecurity Analyst, where you will monitor and analyze security systems to identify vulnerabilities and respond to incidents, ensuring our organization's data remains secure.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "3000"
+    },
+    {
+      "date": "04 Oktober, 2024",
+      "title": "Cybersecurity Analyst",
+      "desc": "Join our team as a Cybersecurity Analyst, where you will monitor and analyze security systems to identify vulnerabilities and respond to incidents, ensuring our organization's data remains secure.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "1800"
+    },
+    {
+      "date": "08 September, 2024",
+      "title": "Security Engineer",
+      "desc": "We are seeking a Security Engineer to design and implement robust security solutions that protect our infrastructure and data from cyber threats.Your expertise will be crucial in developing innovative security architectures and staying ahead of evolving risks.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "2200"
+    },
+    {
+      "date": "22 May, 2024",
+      "title": "Penetration Tester",
+      "desc": "As a Penetration Tester, you will simulate attacks to identify and exploit vulnerabilities, providing critical insights to enhance our security posture.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "1000"
+    },
+    {
+      "date": "20 April, 2024",
+      "title": "Security Engineer",
+      "desc": "We are seeking a Security Engineer to design and implement robust security solutions that protect our infrastructure and data from cyber threats.Your expertise will be crucial in developing innovative security architectures and staying ahead of evolving risks.",
+      "employmentType": ["full-time", "on-site", "hybrid"],
+      "salary": "3500"
+    }
+  ],
   "clientTestimonial": [
     {
       "icon": "./icons/client-icon.png",
@@ -325,6 +611,10 @@
   "section_two": {
     "title": "Always On Guard: Your 24/7 Online Security Solution for Unmatched Protection",
     "image": "./images/section-two.png"
+  },
+  "section_three": {
+    "title": "Who We Are",
+    "content": "Stay informed with the latest threat insights delivered directly to your inbox through our Newsletter."
   },
   "contacts": [
     {

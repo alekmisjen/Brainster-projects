@@ -9,6 +9,7 @@ import { Button } from "../components/Button/Button";
 import Footer from "../components/Footer/Footer";
 import Testimonial from "../components/Testimonial/Testimonial";
 import { Team } from "../components/Team/Team";
+import { SectionThree } from "../components/SectionThree";
 
 export const Home = () => {
   const customHandleOnClick = () => {
@@ -45,6 +46,7 @@ export const Home = () => {
       <SectionOne sectionOne={data.section_one} />
       <SectionTwo sectionTwo={data.section_two} />
       <Slider />
+
       <div className="container my-5">
         <h2 className="text-center mb-4">Our leadership Team</h2>
         <p>
@@ -57,6 +59,7 @@ export const Home = () => {
 
         <Team data={data.team} />
       </div>
+      <SectionThree data={data.section_three} />
       <div className="container my-5">
         <h2 className="text-center mb-4">Join our happy customers!</h2>
         <Testimonial />

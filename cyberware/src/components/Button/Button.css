@@ -1,6 +1,5 @@
 .button {
   background-color: #ff6f0f;
-
   padding: 10px 20px;
   border-radius: 3px;
   cursor: pointer;
@@ -11,6 +10,9 @@
   transition: all 0.3s;
   display: flex;
   flex-direction: row;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center;
   gap: 10px;
   margin: 10px 0;
 }
@@ -35,12 +37,15 @@
 }
 .button-transparent {
   background-color: transparent;
-
+  color: white;
+  border-radius: none;
   border: 2px solid #ff6f0f; /* Example border color */
   /* Example text color */
 }
 
 /* Add hover effect for transparent buttons */
 .button-transparent:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Slight background on hover */
+  background-color: rgba(0, 0, 0, 0.1);
+
+  border: 2px solid white; /* Slight background on hover */
 }

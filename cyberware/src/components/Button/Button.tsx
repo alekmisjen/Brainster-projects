@@ -6,6 +6,7 @@ interface ButtonProps {
   size?: "small" | "medium" | "large" | "round";
   transparent?: boolean;
   color?: string;
+  style?: React.CSSProperties;
 }
 
 export const Button = ({
@@ -15,6 +16,7 @@ export const Button = ({
   transparent = false,
   color = "#fff",
   handleOnClick,
+  style,
 }: ButtonProps) => {
   return (
     <button
@@ -22,7 +24,7 @@ export const Button = ({
       className={`button button-${size} ${
         transparent ? "button-transparent" : ""
       }`}
-      style={{ color }}
+      style={{ color, ...style }}
     >
       {icon && icon}
       {label}

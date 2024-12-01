@@ -4,7 +4,7 @@ import { Form } from "../Form/Form";
 
 const Footer: React.FC = () => {
   return (
-    <div className="container-fluid bg-dark  footer mt-5 pt-5 px-0">
+    <div className="container-fluid bg-dark footer mt-5 pt-5 px-0">
       <div className="row mx-auto ms-5">
         {/* Left Section */}
         <div className="col-lg-2 col-md-6 me-3 footer-section footer-logo">

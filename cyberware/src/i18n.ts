@@ -14,35 +14,38 @@ i18n
     interpolation: {
       escapeValue: false, // React already escapes values
     },
-    resources: {
-      en: {
-        translation: {
-          "Emergency Response Plan": "Emergency Response Plan",
-          Support: "Support",
-          Home: "Home",
-          hero: {
-            preTitle: "Your Cybersecurity Experts Securing the Future Today",
-            title: "Tailored, AI-driven solutions to protect your business",
-            desc: "Protecting the digital future through innovative cybersecurity solutions, we empower businesses to safeguard their assets, ensure compliance, and maintain trust in an increasingly connected world",
-            buttonLabel: "Започнете денес", // Add this line
-          },
-        },
-      },
-
-      mk: {
-        translation: {
-          "Emergency Response Plan": "Итен план",
-          Support: "Подржка",
-          Home: "Doma",
-          hero: {
-            preTitle: "Вашиот нов почеток",
-            title: "Добредојдовте во нашата платформа",
-            desc: "Ова е опис за херој секцијата. Почнете денес!",
-            buttonLabel: "Започнете денес", // Add this line
-          },
-        },
-      },
+    backend: {
+      loadPath: "/locales/{{lng}}/translation.json", // Translation files path
     },
+    // resources: {
+    //   en: {
+    //     translation: {
+    //       "Emergency Response Plan": "Emergency Response Plan",
+    //       Support: "Support",
+    //       Home: "Home",
+    //       hero: {
+    //         preTitle: "Your Cybersecurity Experts Securing the Future Today",
+    //         title: "Tailored, AI-driven solutions to protect your business",
+    //         desc: "Protecting the digital future through innovative cybersecurity solutions, we empower businesses to safeguard their assets, ensure compliance, and maintain trust in an increasingly connected world",
+    //         buttonLabel: "Започнете денес", // Add this line
+    //       },
+    //     },
+    //   },
+
+    //   mk: {
+    //     translation: {
+    //       "Emergency Response Plan": "Итен план",
+    //       Support: "Подржка",
+    //       Home: "Doma",
+    //       hero: {
+    //         preTitle: "Вашиот нов почеток",
+    //         title: "Добредојдовте во нашата платформа",
+    //         desc: "Ова е опис за херој секцијата. Почнете денес!",
+    //         buttonLabel: "Започнете денес", // Add this line
+    //       },
+    //     },
+    //   },
+    // },
   });
 
 export default i18n;
