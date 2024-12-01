@@ -54,7 +54,7 @@ button:focus-visible {
 }
 
 .logo {
-  height: 100%;
+  height: 70%;
   margin: 0 30px; /* Adjust margin for spacing between logos */
   object-fit: contain;
 }
@@ -106,3 +106,22 @@ button:focus-visible {
 .contact .form-control {
   background-color: #2a2a2a !important;
 }
+/* Scoped scrollbar styles for .scrollable-newsletters */
+.scrollable-newsletters::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollable-newsletters::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 4px;
+}
+
+.scrollable-newsletters::-webkit-scrollbar-track {
+  background-color: black;
+  border-radius: 4px;
+}
+/* .scrollable-newsletters {
+  scrollbar-width: thin;
+  scrollbar-color: orange black;
+} */

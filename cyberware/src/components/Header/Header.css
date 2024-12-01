@@ -1,14 +1,12 @@
 .header__top {
   background: white;
+  height: 50px;
 }
 
-.header__top__left {
-  padding: 10px 0 13px;
-}
 .header__top__right a {
   color: #000;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 300;
 }
 /* .nav-item {
   margin: 0 8px;

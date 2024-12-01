@@ -19,7 +19,7 @@ export const TopHeader = () => {
   return (
     <div className="header__top bg-white">
       <div className="container">
-        <div className="row no-gutters">
+        <div className="row ">
           <div className="col-lg-4 col-md-4 text-lg-left">
             <div className="header__top__left">
               <Link to="/" className="navbar-brand">

@@ -9,8 +9,8 @@ export interface Card {
   icon?: string;
 }
 export interface Content {
-  subTitle: string;
-  text: string;
+  subTitle?: string;
+  text?: string;
 }
 
 export interface Body {
@@ -23,6 +23,14 @@ export interface SIEMServicePage {
   title: string;
   icon: string;
   card: Card[];
+  body: Body[];
+}
+export interface NewsletterPage {
+  id: string;
+  title: string;
+  subtitle: string;
+  date: string;
+  author: string;
   body: Body[];
 }
 export interface PTestingServicePage {
